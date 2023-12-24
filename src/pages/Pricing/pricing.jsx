@@ -1,6 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banner.png";
-import aboutUs from "../../assets/images/about_us1.png";
+import aboutUs from "../../assets/images/aboutus.png";
 import missionLogo from "../../assets/icons/mission.svg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";

@@ -1,6 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banner.png";
-import aboutUs from "../../assets/images/about_us1.png";
+import aboutUs from "../../assets/images/aboutus.png";
 import missionLogo from "../../assets/icons/mission.svg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";
@@ -40,23 +40,23 @@ function Contact() {
     <section>
       <div className="relative">
         <img src={banner} alt="Banner description" className="w-full" />
-        <div className="absolute top-10 h-full flex flex-col pl-20 w-[800px] justify-center left-0 p-8 space-y-5">
+        <div className="absolute md:top-10 top-0 h-full flex flex-col pl-20 md:w-[800px] justify-center left-0 p-8 space-y-5">
           <div className="flex gap-2 items-center">
             <hr className="bg-white h-[5px] w-[100px]" />
             <h1 className="text-white text-ls">Contact</h1>
           </div>
-          <h1 className="text-white text-[48px] leading-tight  font-bold w-[80%]">
+          <h1 className="text-white md:text-[48px] leading-tight  font-bold w-[80%]">
             Get in touch
           </h1>
-          <p className="text-white w-[60%]">
+          <p className="text-white w-[60%] hidden md:block">
             If you have any questions or queries, feel free to write to us on
             visit us anytime.
           </p>
         </div>
       </div>
 
-      <div className="bg-white py-20 w-full flex items-center justify-center px-80 space-x-10">
-        <div className="w-[50%]">
+      <div className="bg-white md:py-20 py-10 w-full flex flex-col md:flex-row items-center justify-center md:px-80 md:space-x-10 p-5">
+        <div className="md:w-[50%]">
           <div className="flex justify-start gap-2 items-center">
             <hr className="bg-black h-[5px] w-[100px]" />
             <h1 className="text-black text-ls uppercase">offices</h1>
@@ -73,8 +73,8 @@ function Contact() {
                 bring doesn't first shall two signs.
               </p>
             </div>
-            <div className="flex justify-between items-center">
-              <div className="">
+            <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center space-y-5 md:space-y-0">
+              <div className="w-full">
                 <p className="font-semibold">Ejisu-Kumasi road,</p>
                 <p>Adako Jachie</p>
                 <p>Near Prefos Limited</p>
@@ -99,9 +99,9 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="w-[50%] h-fit flex justify-center items-center relative -mt-40">
+        <div className="md:w-[50%] h-fit flex justify-center items-center relative md:-mt-40 mt-5">
           <div className="w-full h-full flex items-center justify-center">
-            <div className="h-fit w-full bg-white rounded-xl shadow-md flex flex-col items-center space-y-10 p-10">
+            <div className="h-fit w-full bg-white rounded-xl shadow-md flex flex-col items-center space-y-10 p-5 md:p-10">
               <p className="text-xl"> Send your Queries</p>
               <div className="w-full flex flex-col space-y-10">
                 <label htmlFor="" className="flex flex-col space-y-1">
@@ -152,7 +152,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 w-full place-items-center pb-40 px-40 gap-10">
+      <div className="grid md:grid-cols-3 w-full place-items-center pb-40 md:px-40 md:gap-10 gap-2 p-5">
         {contactCards.map((item, index) => {
           return (
             <div

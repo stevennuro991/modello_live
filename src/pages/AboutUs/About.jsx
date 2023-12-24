@@ -1,6 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banner.png";
-import aboutUs from "../../assets/images/about_us1.png";
+import aboutUs from "../../assets/images/aboutus.png";
 import missionLogo from "../../assets/icons/mission.svg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";
@@ -11,12 +11,12 @@ function About() {
     <section>
       <div className="relative">
         <img src={banner} alt="Banner description" className="w-full" />
-        <div className="absolute top-20 h-full flex flex-col pl-20 w-[800px] justify-center  left-0 p-8">
+        <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center  left-0 p-8">
           <div className="flex gap-2 items-center">
             <hr className="bg-white h-[5px] w-[100px]" />
             <h1 className="text-white text-ls">About us</h1>
           </div>
-          <h1 className="text-white text-[48px] leading-tight  font-bold">
+          <h1 className="text-white md:text-[48px] leading-tight  font-bold">
             Caring about your cleaning needs
           </h1>
           {/* <p className="text-white">
@@ -26,16 +26,16 @@ function About() {
         </div>
       </div>
 
-      <div className="flex px-12 justify-between py-7">
+      <div className="flex md:px-12 p-5 flex-col md:flex-row justify-between py-7 space-y-5 md:space-y-0">
         <div>
-          <div className="flex gap-2 items-center">
+          <div className="flex  gap-2 items-center">
             <hr className="bg-black h-[5px] w-[100px]" />
             <h1 className="text-black">About us</h1>
           </div>
-          <h1 className="font-bold w-[400px] text-4xl pt-6">
+          <h1 className="font-bold md:w-[400px] md:text-4xl pt-6">
             Why Will You Choose Our Services?
           </h1>
-          <p className="w-[500px] pt-2 text-justify">
+          <p className="md:w-[500px] pt-2 text-justify">
             Modello Services is a property maintenance company that was birthed
             in 2018 which pays royalties to Modello and Gem Limited, considered
             one of the leading fabric and PVC vinyl faux leather wholesale
@@ -46,7 +46,7 @@ function About() {
             great professionalism and skills..
           </p>
         </div>
-        <img className="h-1/2 w-1/2" src={aboutUs} alt="" />
+        <img className="md:h-1/2 md:w-1/2" src={aboutUs} alt="" />
       </div>
       <div className="flex items-center justify-center">
         <div className="bg-white item-center w-[1100px]  p-8 rounded-lg shadow-md">
