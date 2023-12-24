@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "../../assets/images/banner.png";
 import aboutUs from "../../assets/images/aboutus.png";
 import missionLogo from "../../assets/icons/mission.svg";
@@ -18,6 +18,186 @@ import service7 from "../../assets/images/hedge-trimming.jpg";
 import serviceBg from "../../assets/images/disinfection-worker-spraying-subway-staircase-due-covid19-pandemic.jpg";
 
 function Service() {
+  const [bookingType, setBookingType] = useState();
+  const [carType, setCarType] = useState();
+  const [detailType, setDetailType] = useState();
+
+  const apartmentPricingSelector = (
+    <>
+      <select className="border p-2 w-full bg-gray-100 rounded">
+        <option value="700-800">Select Apartment Type</option>
+        <option value="700-800">1 Bedroom Apartment (GH₵ 700-800)</option>
+        <option value="850-950">2 Bedroom Apartment (GH₵ 850-950)</option>
+        <option value="980-1065">3 Bedroom Apartment (GH₵ 980-1065)</option>
+        <option value="1200-1380">4 Bedroom Apartment (GH₵ 1200-1380)</option>
+      </select>
+    </>
+  );
+
+  const sofaPricingSelector = (
+    <>
+      <select className="border p-2 w-full bg-gray-100 rounded">
+        <option value="450-550">Select sofa type</option>
+        <option value="450-550">Sofa set 3,2,1,1 (GH₵ 450-550)</option>
+        <option value="150-200">2 in 1 sofa (GH₵ 150-200)</option>
+        <option value="980-1065">3 in 1 (GH₵ 250 - 300)</option>
+        <option value="100-150">Sofa 1ps (GH₵ 100-150)</option>
+      </select>
+    </>
+  );
+
+  const matteressPricingSelector = (
+    <>
+      <select className="border p-2 w-full bg-gray-100 rounded">
+        <option value="700-800">Select Mattress Type</option>
+        <option value="450-550">King Size(GH₵ 500)</option>
+        <option value="150-200">Queen Size(GH₵ 450)</option>
+        <option value="980-1065">Standard Size(GH₵ 300)</option>
+        <option value="100-150">Student Matress(GH₵ 180)</option>
+      </select>
+    </>
+  );
+  const carTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setCarType(e.target.value);
+        }}
+      >
+        <option value="Select Car Type">Select Car Type</option>
+        <option value="Sedan/Saloon">Sedan/Saloon</option>
+        <option value="Mini SUV's">Mini SUV's</option>
+        <option value="SUV's">SUV's</option>
+        <option value="Trucks">Trucks</option>
+      </select>
+    </>
+  );
+  const saloonDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 265)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 435)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 510)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 625)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1030)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 400)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 350)
+        </option>
+      </select>
+    </>
+  );
+  const miniSuvDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 320)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 465)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 540)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 655)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1050)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 500)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 450)
+        </option>
+      </select>
+    </>
+  );
+  const suvDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 370)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 510)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 655)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 770)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1130)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 600)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 550)
+        </option>
+      </select>
+    </>
+  );
+  const truckDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 415)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 625)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 770)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 915)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1230)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 700)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 750)
+        </option>
+      </select>
+    </>
+  );
+
   const serviceCards = [
     {
       image: service1,
@@ -53,16 +233,19 @@ function Service() {
       image: service6,
       name: "Pest Control",
       pricing: "Starting from 20cedis",
+      link: "/pest-control",
     },
     {
       image: service7,
       name: "Gardening Maintenance and Landscaping",
       pricing: "Starting from 20cedis",
+      link: "/gardening-and-landscaping",
     },
     {
       image: service8,
       name: "Industrial cleaning",
       pricing: "Starting from 20cedis",
+      link: "/industrial-cleaning",
     },
   ];
 
@@ -188,11 +371,31 @@ function Service() {
           <div className="w-full h-full grid md:grid-cols-3 md:gap-40 place-items-center p-5 gap-y-10 md:gap-y-0">
             <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
-                <p>Choose a service</p>
-                <input
-                  type="text"
+                <p> Choose a service</p>
+                <select
                   className="border p-2 w-full bg-gray-100 rounded"
-                />
+                  onChange={(e) => {
+                    setBookingType(e.target.value);
+                  }}
+                >
+                  <option value="">Select Service</option>
+
+                  <option value="Apartment Cleaning">Apartment Cleaning</option>
+                  <option value="Sofa Cleaning">Sofa Cleaning</option>
+                  <option value="Mattress Cleaning">Mattress Cleaning</option>
+                  <option value="Gardening Maintenance and Landscaping">
+                    Gardening Maintenance and Landscaping
+                  </option>
+                  <option value="Pest Control Service">
+                    Pest Control Service
+                  </option>
+                  <option value="Car Washing and Detailing">
+                    Car Washing and Detailing
+                  </option>
+                  <option value="Industrial Cleaning">
+                    Industrial Cleaning
+                  </option>
+                </select>
               </label>
               <label htmlFor="" className="flex flex-col space-y-1">
                 <p> Your name</p>
@@ -204,11 +407,13 @@ function Service() {
             </div>
             <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Type of cleaning</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
+                {/* <p> Type of cleaning</p> */}
+                {bookingType === "Apartment Cleaning" &&
+                  apartmentPricingSelector}
+                {bookingType === "Sofa Cleaning" && sofaPricingSelector}
+                {bookingType === "Mattress Cleaning" &&
+                  matteressPricingSelector}
+                {bookingType === "Car Washing and Detailing" && carTypeselector}
               </label>
               <label htmlFor="" className="flex flex-col space-y-1">
                 <p> Zip code</p>
@@ -220,11 +425,11 @@ function Service() {
             </div>
             <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Total floor area</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
+                {/* <p> Total floor area</p> */}
+                {carType === "Sedan/Saloon" && saloonDetailsTypeselector}
+                {carType === "Mini SUV's" && miniSuvDetailsTypeselector}
+                {carType === "SUV's" && suvDetailsTypeselector}
+                {detailType === "Trucks" && truckDetailsTypeselector}
               </label>
               <label htmlFor="" className="flex flex-col space-y-1">
                 <p> Email address</p>
@@ -235,7 +440,7 @@ function Service() {
               </label>
             </div>
           </div>
-          <div className="w-full h-full grid md:grid-cols-3  gap-10 md:gap-40 place-items-center py-10 p-5 md:p-0">
+          <div className="w-full h-full grid md:grid-cols-3  gap-10 md:gap-40 place-items-center py-10 p-5 md:p-5">
             <div className="w-full">
               <button className="uppercase w-[100%] bg-blue-500 text-white p-2 flex items-center justify-center rounded-md">
                 <p>Submit</p>

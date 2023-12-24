@@ -7,3 +7,10 @@
     background-position: center;
     background-size: cover;
 }
+.service-img {
+    background-image : url("../src/assets/images/african-american-worker-standing-uniform-wearing-safety-hat-factory.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity */
+}

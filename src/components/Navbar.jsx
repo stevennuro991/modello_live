@@ -111,7 +111,7 @@ const Navbar = ({ setScroll }) => {
 
       {/* FOR SMALL SCREENS */}
 
-      <nav className="md:hidden flex bg-blue-300 w-full text-white py-1">
+      <nav className="md:hidden flex bg-blue-300 w-full text-white py-1 z-50">
         <div className="w-full flex items-center justify-between">
           {/* Logo and Navigation Links */}
           <div className="flex items-center w-full px-5">

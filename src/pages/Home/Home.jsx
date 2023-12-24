@@ -31,21 +31,23 @@ import slide3 from "../../assets/images/full-shot-men-cleaning-office.jpg";
 function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [bookingType, setBookingType] = useState();
+  const [carType, setCarType] = useState();
+  const [detailType, setDetailType] = useState();
   const serviceicons = [
     {
-      icon: <GrUserSettings className="text-white text-xl"/>,
+      icon: <GrUserSettings className="text-white text-xl" />,
       name: "Pick a suitable Plan",
       description:
         "Rule first third above first tree saw Grass subdue great eep saying forth rule hath to the replenish.",
     },
     {
-      icon: <GiDelicatePerfume className="text-white text-xl"/>,
+      icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Set your schedule",
       description:
         "Rule first third above first tree saw Grass subdue great eep saying forth rule hath to the replenish.",
     },
     {
-      icon: <FaStudiovinari className="text-white text-xl"/>,
+      icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Get things done",
       description:
         "Rule first third above first tree saw Grass subdue great eep saying forth rule hath to the replenish.",
@@ -221,6 +223,146 @@ function Home() {
       </select>
     </>
   );
+  const carTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setCarType(e.target.value);
+        }}
+      >
+        <option value="Select Car Type">Select Car Type</option>
+        <option value="Sedan/Saloon">Sedan/Saloon</option>
+        <option value="Mini SUV's">Mini SUV's</option>
+        <option value="SUV's">SUV's</option>
+        <option value="Trucks">Trucks</option>
+      </select>
+    </>
+  );
+  const saloonDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 265)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 435)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 510)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 625)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1030)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 400)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 350)
+        </option>
+      </select>
+    </>
+  );
+  const miniSuvDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 320)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 465)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 540)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 655)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1050)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 500)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 450)
+        </option>
+      </select>
+    </>
+  );
+  const suvDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 370)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 510)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 655)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 770)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1130)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 600)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 550)
+        </option>
+      </select>
+    </>
+  );
+  const truckDetailsTypeselector = (
+    <>
+      <select
+        className="border p-2 w-full bg-gray-100 rounded"
+        onChange={(e) => {
+          setDetailType(e.target.value);
+        }}
+      >
+        <option value="Select Details Type">Select Detailing Type</option>
+        <option value="Interior Detailing and Cleaning">
+          Interior Detailing and Cleaning (GH₵ 415)
+        </option>
+        <option value="Interior and Exterior(Standard)">
+          Interior and Exterior(Standard) (GH₵ 625)
+        </option>
+        <option value="Interior and Exterior(Duluxe)">
+          Interior and Exterior(Duluxe) (GH₵ 770)
+        </option>
+        <option value="Interior and Exterior(Platinum)">
+          Interior and Exterior(Platinum) (GH₵ 915)
+        </option>
+        <option value="Complete Interior and Exterior(Exclusive)">
+          Complete Interior and Exterior(Exclusive) (GH₵ 1230)
+        </option>
+        <option value="Glass Restoration">Glass Restoration (GH₵ 700)</option>
+        <option value="TailLight/HeadLight Restoration">
+          TailLight/HeadLight Restoration (GH₵ 750)
+        </option>
+      </select>
+    </>
+  );
 
   return (
     <section className="">
@@ -249,7 +391,7 @@ function Home() {
           })}
           <div className="md:abosulte">
             <img src={banner} alt="Banner description" className="w-full" />
-            <div className="absolute top-10 h-full flex flex-col md:pl-40 md:w-[800px] justify-center md:left-0 p-5 space-y-5">
+            <div className="absolute top-20 h-1/2 flex flex-col md:pl-40 md:w-[800px] justify-center md:left-0 p-5 space-y-5">
               <div className="flex gap-2 items-center">
                 <hr className="bg-white h-[5px] w-[100px]" />
                 <h1 className="text-white text-ls">INTRODUCING MODELLO</h1>
@@ -301,7 +443,7 @@ function Home() {
               </p>
               <Link
                 to="/about"
-                className="text-red-500 text-sm underline pb-10 cursor-pointer z-50"
+                className="text-blue-500 text-sm underline pb-10 cursor-pointer z-50"
               >
                 Learn more about the company
               </Link>
@@ -357,12 +499,24 @@ function Home() {
                     <option value="Pest Control Service">
                       Pest Control Service
                     </option>
+                    <option value="Car Washing and Detailing">
+                      Car Washing and Detailing
+                    </option>
+                    <option value="Industrial Cleaning">
+                      Industrial Cleaning
+                    </option>
                   </select>
                   {bookingType === "Apartment Cleaning" &&
                     apartmentPricingSelector}
                   {bookingType === "Sofa Cleaning" && sofaPricingSelector}
                   {bookingType === "Mattress Cleaning" &&
                     matteressPricingSelector}
+                  {bookingType === "Car Washing and Detailing" &&
+                    carTypeselector}
+                  {carType === "Sedan/Saloon" && saloonDetailsTypeselector}
+                  {carType === "Mini SUV's" && miniSuvDetailsTypeselector}
+                  {carType === "SUV's" && suvDetailsTypeselector}
+                  {detailType === "Trucks" && truckDetailsTypeselector}
                 </label>
 
                 <label htmlFor="datePicker" className="flex flex-col space-y-1">
@@ -402,25 +556,25 @@ function Home() {
             Get amazing cleaning in 3 simple steps{" "}
           </h1>
         </div>
-        <div className="grid md:grid-cols-3 w-full md:place-items-center md:gap-10 z-30 relative h-full md:px-60 pt-[250px]">
-        {serviceicons.map((item, index) => {
-              return (
-                <div key={index} className="w-full">
-                  <div className="flex flex-row items-center justify-center w-full py-5 space-x-5">
-                    <div className="w-[20%] ">
-                      <div className="w-20 h-20 rounded-full bg-[#F19C4F] flex items-center justify-center">
-                        {" "}
-                        {item?.icon}
-                      </div>
-                    </div>
-                    <div className="w-[90%] flex flex-col text-white">
-                      <p className="font-bold">{item?.name}</p>
-                      <p className="text-xs">{item?.description}</p>
+        <div className="grid md:grid-cols-3 w-full md:place-items-center md:gap-10 z-30 relative h-full md:px-60 pt-[250px] p-5 md:p-0">
+          {serviceicons.map((item, index) => {
+            return (
+              <div key={index} className="w-full">
+                <div className="flex flex-row items-center justify-center w-full py-5 space-x-5">
+                  <div className="w-[20%] ">
+                    <div className="w-20 h-20 rounded-full bg-[#F19C4F] flex items-center justify-center">
+                      {" "}
+                      {item?.icon}
                     </div>
                   </div>
+                  <div className="w-[90%] flex flex-col text-white">
+                    <p className="font-bold">{item?.name}</p>
+                    <p className="text-xs">{item?.description}</p>
+                  </div>
                 </div>
-              );
-            })}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="flex flex-col md:flex-row md:px-60 items-center md:justify-between py-7 space-y-5 p-5">
@@ -567,7 +721,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-contain h-96 w-[100%] relative object-scale-down bg-black property-img ">
+      {/* <div className="bg-contain h-96 w-[100%] relative object-scale-down bg-black property-img ">
         <img
           src={serviceBg}
           alt="..."
@@ -653,7 +807,7 @@ function Home() {
             <div></div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col md:flex-row md:px-60 items-center md:justify-between py-7 space-y-5 p-5">
         <div className="flex flex-col space-y-5 md:w-[40%] ">
           <div className="flex gap-2 items-center w-full justify-start">

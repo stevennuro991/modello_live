@@ -15,7 +15,7 @@ import serviceBg from "../../assets/images/disinfection-worker-spraying-subway-s
 import { Link } from "react-router-dom";
 import { TiChevronRight } from "react-icons/ti";
 
-function SofaCleaning() {
+function GardeningAndLandscaping() {
   const [bookingType, setBookingType] = useState();
   const [carType, setCarType] = useState();
   const [detailType, setDetailType] = useState();
@@ -195,6 +195,7 @@ function SofaCleaning() {
       </select>
     </>
   );
+
   const serviceicons = [
     {
       icon: <GrUserSettings className="text-white text-xl" />,
@@ -226,18 +227,18 @@ function SofaCleaning() {
         <img src={banner} alt="Banner description" className="w-full" />
         <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center md:left-0 p-8">
           <h1 className="text-white md:text-[48px] leading-tight  font-bold">
-            SOFA cleaning
+            Gardening and Landscaoing
           </h1>
           <div className="flex space-x-3 items-center text-gray-50 font-extralight">
             <p>Home</p>
             <FaChevronRight />
             <p>Services</p>
             <FaChevronRight />
-            <p>Sofa Cleaning</p>
+            <p>Gardening and Landscaping</p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:p-20 md:space-x-20">
+      <div className="flex flex-col md:flex-row md:p-20 md:space-x-20 w-full">
         <div className="flex flex-col  md:ml-20 justify-between py-7 md:w-[40%] w-[100%] p-5 md:p-0">
           <div className="w-full md:border-2 rounded-xl h-fit p-5">
             <div className="flex gap-2 items-center">
@@ -398,7 +399,7 @@ function SofaCleaning() {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur.
           </p>
-          <div className="w-full flex flex-col md:flex-row border h-fit md:py-5 justify-between">
+          <div className="w-full flex flex-col md:flex-row h-fit md:py-5 justify-between">
             <div className="md:w-[60%] md:h-[600px]">
               <img src={hover} alt="" className="h-full object-cover" />
             </div>
@@ -505,7 +506,7 @@ function SofaCleaning() {
                 <input
                   type="text"
                   className="border p-2 w-full bg-gray-100 rounded"
-                  placeholder="Sofa Cleaning"
+                  placeholder="Gardening and Landscaping"
                   disabled
                 />
               </label>
@@ -516,22 +517,8 @@ function SofaCleaning() {
                   className="border p-2 w-full bg-gray-100 rounded"
                 />
               </label>
-            </div>
-            <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Type of cleaning</p>
-                <select className="border p-2 w-full bg-gray-100 rounded">
-                  <option value="450-550">Select sofa type</option>
-                  <option value="450-550">
-                    Sofa set 3,2,1,1 (GH₵ 450-550)
-                  </option>
-                  <option value="150-200">2 in 1 sofa (GH₵ 150-200)</option>
-                  <option value="980-1065">3 in 1 (GH₵ 250 - 300)</option>
-                  <option value="100-150">Sofa 1ps (GH₵ 100-150)</option>
-                </select>
-              </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Zip code</p>
+                <p> Email Address</p>
                 <input
                   type="text"
                   className="border p-2 w-full bg-gray-100 rounded"
@@ -539,6 +526,36 @@ function SofaCleaning() {
               </label>
             </div>
             <div className="w-full flex flex-col space-y-10">
+              <label htmlFor="" className="flex flex-col space-y-1">
+                <p> Zip code</p>
+                <input
+                  type="text"
+                  className="border p-2 w-full bg-gray-100 rounded"
+                />
+              </label>
+              <label htmlFor="" className="flex flex-col space-y-1">
+                <p> Number of washrooms</p>
+                <input
+                  type="text"
+                  className="border p-2 w-full bg-gray-100 rounded"
+                />
+              </label>
+              <label htmlFor="" className="flex flex-col space-y-1">
+                <p> Number of garages</p>
+                <input
+                  type="text"
+                  className="border p-2 w-full bg-gray-100 rounded"
+                />
+              </label>
+            </div>
+            <div className="w-full flex flex-col space-y-10">
+              <label htmlFor="" className="flex flex-col space-y-1">
+                <p> Number of beds</p>
+                <input
+                  type="text"
+                  className="border p-2 w-full bg-gray-100 rounded"
+                />
+              </label>
               <label htmlFor="" className="flex flex-col space-y-1">
                 <p> Total floor area</p>
                 <input
@@ -547,7 +564,7 @@ function SofaCleaning() {
                 />
               </label>
               <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Email address</p>
+                <p> Number of rooms</p>
                 <input
                   type="text"
                   className="border p-2 w-full bg-gray-100 rounded"
@@ -575,4 +592,4 @@ function SofaCleaning() {
   );
 }
 
-export default SofaCleaning;
+export default GardeningAndLandscaping;

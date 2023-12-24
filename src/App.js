@@ -10,6 +10,9 @@ import ApartmentCleaning from "./pages/Cleaning/apartment-cleaning";
 import MattressCleaning from "./pages/Cleaning/mattress-cleaning";
 import SofaCleaning from "./pages/Cleaning/sofa-cleaning";
 import CarCleaning from "./pages/Cleaning/car-cleaning";
+import IndustrialCleaning from "./pages/Cleaning/industrial-cleaning";
+import GardeningAndLandscaping from "./pages/Cleaning/gardening-and-landscaping";
+import PestControl from "./pages/Cleaning/pest-control";
 
 const routes = [
   {
@@ -55,6 +58,18 @@ const routes = [
       {
         path: "car-cleaning",
         element: <CarCleaning />,
+      },
+      {
+        path: "industrial-cleaning",
+        element: <IndustrialCleaning />,
+      },
+      {
+        path: "gardening-and-landscaping",
+        element: <GardeningAndLandscaping />,
+      },
+      {
+        path: "pest-control",
+        element: <PestControl />,
       },
     ],
   },
