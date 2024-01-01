@@ -21,27 +21,28 @@ function PestControl() {
     {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Experienced Staff",
-      description: "Rule first third above first treeth  the replenish.",
+      description: "Skilled, Knowledgeable, Professional, Efficient, Reliable",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Quick, Efficient, Prompt, Expedient, Timely",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
       name: "Best Equipment",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Advanced, High-quality, Innovative, Reliable, State-of-the-art",
     },
   ];
+
   return (
     <section>
       <div className="relative">
@@ -170,58 +171,7 @@ function PestControl() {
               </div>
             </div>
           </div>
-          <div className="md:w-[60%] md:mr-40 space-y-10 p-5 me:p-0">
-          <img
-            className="md:h-[500px] md:w-[90%]"
-            src={cleaninservice}
-            alt=""
-          />
-          <h1 className="md:text-2xl font-bold">Sofa Cleaning Service</h1>
-          <p className="md:pr-44">
-            Specializing in deep cleaning and stain removal, our professional
-            team meticulously restores your sofa's appearance and freshness
-            using eco-friendly, safe products and advanced equipment, ensuring a
-            revitalized, hygienic, and like-new condition.
-          </p>
-          <div className="w-full flex flex-col md:flex-row border h-fit md:py-5 justify-between">
-            <div className="md:w-[60%] md:h-[600px]">
-              <img src={hover} alt="" className="h-full object-cover" />
-            </div>
-            <div className="md:w-[40%]">
-              <div className="h-full w-full flex flex-col space-y-5 p-5">
-                <h1 className="font bold text-2xl">
-                  Our team prefer it doing with the perfection.
-                </h1>
-                <div className="flex flex-col space-y-5">
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Inspection and Pre-treatment</p>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Vacuuming</p>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Spot Cleaning</p>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Shampooing or Steam Cleaning</p>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Rinsing</p>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Drying</p>
-                  </div>
-              
-                </div>
-              </div>
-            </div>
-          </div>
+        
           <div className="md:pr-44">
             <p>
               Remember, regular maintenance is key to keeping your apartment
@@ -252,7 +202,6 @@ function PestControl() {
     
         </div>
         </div>
-      </div>
     </section>
   );
 }

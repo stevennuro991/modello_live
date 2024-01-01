@@ -37,19 +37,19 @@ function Home() {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Pick a suitable Plan",
       description:
-        "We understand that everyone's needs are unique and that is why our range of services are available to cater to your specific needs. Explore our plans below and choose the one that best aligns with your requirements. Whether you're in an individual space looking to get quality service or for a commercial or industrialised space, we've got the perfect plan for you.",
+        "We offer tailored services for personal, commercial, and industrial spaces, ensuring quality solutions for every need.",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Set your schedule",
       description:
-        "With our intuitive scheduling features, you're in control of your time like never before. Tailor your schedule to fit your lifestyle and prioritize tasks. Our user-friendly interface makes it easy to plan your day, week, or month ahead for services you may need. Take charge of your time and set yourself up for great customer service.",
+        "Our intuitive scheduling tool adapts to your lifestyle, enabling easy planning and efficient time management for exceptional customer service.",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Get things done",
       description:
-        "Our platform is designed to help you stay focused, organized, and, most importantly, get things done. Leveraging our professional team and ultramodern tools, you can track progress and celebrate achievements. Booking confirmed, sit back and relax and watch everything get sorted.",
+        "Our platform boosts focus and organization, enabling easy progress tracking and task completion. Simply book with us and relax as we efficiently handle everything.",
     },
   ];
   const serviceCards = [
@@ -87,16 +87,19 @@ function Home() {
       image: service6,
       name: "Pest Control",
       pricing: "Starting from 550cedis",
+      link: "/pest-control",
     },
     {
       image: service7,
       name: "Gardening Maintenance and Landscaping",
-      pricing: "Starting from 20cedis",
+      pricing: "Starting from 550cedis",
+      link: "/gardening-and-landscaping",
     },
     {
       image: service8,
       name: "Industrial cleaning",
       pricing: "Starting from 20cedis",
+      link: "/industrial-cleaning",
     },
   ];
   const surroundingCards = [
