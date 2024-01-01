@@ -78,13 +78,13 @@ function Contact() {
                 <p className="font-semibold">Ejisu-Kumasi road,</p>
                 <p>Adako Jachie</p>
                 <p>Near Prefos Limited</p>
-                <p>+233 547 986 097</p>
+                <p>+233547986097</p>
               </div>
               <div className="">
                 <p className="font-semibold">Ahinsan,</p>
                 <p>GCB Lane</p>
                 <p>Kumasi</p>
-                <p>+233 547 986 097</p>
+                <p>+233547986097</p>
               </div>
             </div>
             <div>
@@ -94,7 +94,7 @@ function Contact() {
                 </p>
                 <p>Lakeside Estate</p>
                 <p>Accra</p>
-                <p>+233 547 986 097</p>
+                <p>+233547986097</p>
               </div>
             </div>
           </div>

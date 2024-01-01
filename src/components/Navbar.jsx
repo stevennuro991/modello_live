@@ -68,6 +68,11 @@ const TopBar = () => {
 const Navbar = ({ setScroll }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  const handleClick = () => {
+    // Your logic here
+    setToggleMenu(!toggleMenu); // Toggles the state
+  };
+
   return (
     <>
       <TopBar />
@@ -78,10 +83,36 @@ const Navbar = ({ setScroll }) => {
               <img height="100" width="100" src={xmasLogo} alt="Xmas Logo" />
             </div>
             <div className="hidden md:flex space-x-4">
-              <Link to="/" className="px-3 py-2 rounded-md text-white text-ls font-medium">Home</Link>
-              <Link to="/about" className="px-3 py-2 rounded-md text-ls text-white font-medium">About</Link>
-              <Link to="/service" className="px-3 py-2 rounded-md text-white text-ls font-medium">Services</Link>
-              <Link to="/contact" className="px-3 py-2 rounded-md text-ls text-white font-medium">Contact Us</Link>
+              <Link
+                to="/"
+                className="px-3 py-2 rounded-md text-white text-ls font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="px-3 py-2 rounded-md text-ls text-white font-medium"
+              >
+                About
+              </Link>
+              <Link
+                to="/service"
+                className="px-3 py-2 rounded-md text-white text-ls font-medium"
+              >
+                Services
+              </Link>
+              <Link
+                to="/contact"
+                className="px-3 py-2 rounded-md text-ls text-white font-medium"
+              >
+                Contact Us
+              </Link>
+              <Link
+                to="/careers"
+                className="px-3 py-2 rounded-md text-ls text-white font-medium"
+              >
+                Carrers
+              </Link>
             </div>
           </div>
         </div>
@@ -128,10 +159,41 @@ const Navbar = ({ setScroll }) => {
               </div>
 
               <div className="md:hidden flex flex-col items-center justify-center space-y-5 my-10">
-                  <Link to="/" className="px-3 py-2 rounded-md text-white text-ls font-medium">Home</Link>
-                <Link to="/about" className="px-3 py-2 rounded-md text-ls text-white font-medium">About</Link>
-                <Link to="/service" className="px-3 py-2 rounded-md text-white text-ls font-medium">Services</Link>
-                <Link to="/contact" className="px-3 py-2 rounded-md text-ls text-white font-medium">Contact Us</Link>
+                <Link
+                  to="/"
+                  onClick={handleClick}
+                  className="px-3 py-2 rounded-md text-white text-ls font-medium"
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/about"
+                  onClick={handleClick}
+                  className="px-3 py-2 rounded-md text-ls text-white font-medium"
+                >
+                  About
+                </Link>
+                <Link
+                  to="/service"
+                  onClick={handleClick}
+                  className="px-3 py-2 rounded-md text-white text-ls font-medium"
+                >
+                  Services
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={handleClick}
+                  className="px-3 py-2 rounded-md text-ls text-white font-medium"
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  to="/careers"
+                  onClick={handleClick}
+                  className="px-3 py-2 rounded-md text-ls text-white font-medium"
+                >
+                  Carrers
+                </Link>
               </div>
             </div>
             {/* <div className="hidden md:flex space-x-4">
@@ -168,6 +230,5 @@ const Navbar = ({ setScroll }) => {
 };
 
 export default Navbar;
-
 
 // (+233) 547 898 6097

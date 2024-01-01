@@ -19,20 +19,17 @@ import { GiDelicatePerfume } from "react-icons/gi";
 import service1 from "../../assets/images/Building-Maintenance-Technician_resized.jpg";
 import service2 from "../../assets/images/Commercial-Carpet-Cleaning-Mistakes.jpg";
 import service3 from "../../assets/images/Furniture-Cleaning-Banner.jpg";
-import service4 from "../../assets/images/Locate-a-Car-Detailing-Near-You.jpg";
 import service5 from "../../assets/images/AdobeStock-RqF2ztT0gI.jpg";
-import service6 from "../../assets/images/ixtR4JdzySzNOZbBcECKfrWdwnzoKLET1622049616.webp";
+import service6 from "../../assets/images/disinfection-worker-spraying-subway-staircase-due-covid19-pandemic.jpg";
 import service8 from "../../assets/images/30978327be125ef27a4acdea5899e0552088923e.png";
 import service7 from "../../assets/images/hedge-trimming.jpg";
 import slide1 from "../../assets/images/slide1.jpeg";
 import slide2 from "../../assets/images/slide5.jpeg";
 import slide3 from "../../assets/images/slide4.jpeg";
-import BookingForm from "../../components/booking_form"
-
+import BookingForm from "../../components/booking_form";
 
 function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [bookingType, setBookingType] = useState();
   const [carType, setCarType] = useState();
   const [detailType, setDetailType] = useState();
   const serviceicons = [
@@ -40,19 +37,19 @@ function Home() {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Pick a suitable Plan",
       description:
-        "Rule first third above first tree saw Grass subdue great eep saying forth rule hath to the replenish.",
+        "We understand that everyone's needs are unique and that is why our range of services are available to cater to your specific needs. Explore our plans below and choose the one that best aligns with your requirements. Whether you're in an individual space looking to get quality service or for a commercial or industrialised space, we've got the perfect plan for you.",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Set your schedule",
       description:
-        "Rule first third above first tree saw Grass subdue great eep saying forth rule hath to the replenish.",
+        "With our intuitive scheduling features, you're in control of your time like never before. Tailor your schedule to fit your lifestyle and prioritize tasks. Our user-friendly interface makes it easy to plan your day, week, or month ahead for services you may need. Take charge of your time and set yourself up for great customer service.",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Get things done",
       description:
-        "Rule first third above first tree saw Grass subdue great eep saying forth rule hath to the replenish.",
+        "Our platform is designed to help you stay focused, organized, and, most importantly, get things done. Leveraging our professional team and ultramodern tools, you can track progress and celebrate achievements. Booking confirmed, sit back and relax and watch everything get sorted.",
     },
   ];
   const serviceCards = [
@@ -131,14 +128,12 @@ function Home() {
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
-      description:
-        "Quick, Efficient, Prompt, Expedient, Timely",
+      description: "Quick, Efficient, Prompt, Expedient, Timely",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
-      description:
-        "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
+      description: "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
@@ -420,11 +415,10 @@ function Home() {
           </div>
         </div>
         <div className="md:w-[50%] z-50">
-        <BookingForm/>
+          <BookingForm />
         </div>
-       
       </div>
-      <div className="bg-contain h-[700px] md:h-[600px] w-[100%] relative md:object-scale-down property-img ">
+      <div className="bg-contain h-[1000px] md:h-[600px] w-[100%] relative md:object-scale-down property-img ">
         <img
           src={serviceBg}
           alt="..."
@@ -432,12 +426,12 @@ function Home() {
           // onError={() => setImageError(true)}
         />
         <div className="bg-blue-900 w-full h-full text-white absolute opacity-70 z-10"></div>
-        <div className="absolute flex w-full h-full justify-center z-20 gap-2 items-center md:-mt-60 -mt-72">
+        <div className="absolute flex w-full h-full justify-center z-20 gap-2 items-center md:-mt-60 -mt-[400px]">
           <hr className="bg-white h-[5px] w-[100px]" />
           <h1 className="text-white uppercase">how it works</h1>
           <hr className="bg-white h-[5px] w-[100px]" />
         </div>
-        <div className="absolute flex w-full h-full justify-center items-center z-20 gap-2 md:-mt-40 -mt-52">
+        <div className="absolute flex w-full h-full justify-center items-center z-20 gap-2 md:-mt-40 -mt-80">
           <h1 className="pt-6 justify-center item-center w-29 text-[32px] md:px-[480px] text-center font-semibold text-white">
             Get amazing cleaning in 3 simple steps{" "}
           </h1>
@@ -573,8 +567,6 @@ function Home() {
           <p className="text-white md:w-[60%]">Kwame Boakye Founder, Moppers</p>
         </div>
       </div> */}
-
-
 
       {/* <div className="bg-gray-100 py-20 w-full flex items-center justify-center">
         <div className="md:px-10">

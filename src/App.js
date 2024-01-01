@@ -101,6 +101,7 @@ import GardeningAndLandscaping from "./pages/Cleaning/gardening-and-landscaping"
 import PestControl from "./pages/Cleaning/pest-control";
 import { Toaster } from 'react-hot-toast';
 import DomesticCleaning from "./pages/Cleaning/domestic-cleaning";
+import Careers from "./pages/ careers/careers";
 
 
 function App() {
@@ -122,6 +123,7 @@ function App() {
           <Route path="gardening-and-landscaping" element={<GardeningAndLandscaping />} />
           <Route path="pest-control" element={<PestControl />} />
           <Route path="domestic-and-commercial-cleaning" element={<DomesticCleaning/>} />
+          <Route path="careers" element={<Careers/>} />
         </Route>
       </Routes>
       <Toaster />

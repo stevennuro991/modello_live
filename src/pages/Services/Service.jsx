@@ -12,7 +12,7 @@ import service2 from "../../assets/images/Commercial-Carpet-Cleaning-Mistakes.jp
 import service3 from "../../assets/images/Furniture-Cleaning-Banner.jpg";
 import service4 from "../../assets/images/Locate-a-Car-Detailing-Near-You.jpg";
 import service5 from "../../assets/images/AdobeStock-RqF2ztT0gI.jpg";
-import service6 from "../../assets/images/ixtR4JdzySzNOZbBcECKfrWdwnzoKLET1622049616.webp";
+import service6 from "../../assets/images/disinfection-worker-spraying-subway-staircase-due-covid19-pandemic.jpg";
 import service8 from "../../assets/images/30978327be125ef27a4acdea5899e0552088923e.png";
 import service7 from "../../assets/images/hedge-trimming.jpg";
 import serviceBg from "../../assets/images/disinfection-worker-spraying-subway-staircase-due-covid19-pandemic.jpg";
