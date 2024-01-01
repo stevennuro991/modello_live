@@ -25,9 +25,15 @@ function Careers() {
     name: Yup.string().required("Please enter your first name"),
     surname: Yup.string().required("Please enter your last name"),
     phone: Yup.string().required("Please enter your phone number"),
-    loc: Yup.string().required("Please enter your location"),
-    name1: Yup.string().required("Please select a name1"),
-    name2: Yup.string().required("Please select a name2"),
+    email: Yup.string()
+      .email("Please enter a valaid email address")
+      .required("Please enter your email address"),
+    gender: Yup.string().required("Please select a gender"),
+    nationality: Yup.string().required("Please select a nationality"),
+    identification: Yup.string().required("Please select a identication"),
+    ghCard: Yup.string().required("This field is required"),
+    passport: Yup.string().required("This field is required"),
+    post: Yup.string().required("Please enter postal code"),
   });
 
   const gender = ["Male", "Female", "Non-binary"];
@@ -39,38 +45,45 @@ function Careers() {
   ];
   const identification = ["Ghana Card", "Passport"];
 
+  // const handleSubmit = (data) => {
+  //   setLoading(true);
+  //   emailjs
+  //     .send(
+  //       "service_rdpth8m",
+  //       "template_8qv5lzn",
+  //       {
+  //         name: data.name,
+  //         surname: data.surname,
+  //         phone: data.phone,
+  //         email: data.email,
+  //         gender: data.gender,
+  //         nationality: data.nationality,
+  //         identification: data.identification,
+  //         ghCard: data.ghCard,
+  //         passport: data.passport,
+  //         post: data.post,
+  //       },
+  //       "EsvXMNLAam5FfQTov"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         if (result.text === "OK") {
+  //           toast.success("Succesful");
+  //         }
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   console.log(data);
+  // };
+
   const handleSubmit = (data) => {
-    setLoading(true);
-    emailjs
-      .send(
-        "service_rdpth8m",
-        "template_8qv5lzn",
-        {
-          name: data.name,
-          phone: data.phone,
-          name2: data.name2,
-          location: data.location,
-          name1: data.name1,
-          name3: data.name3,
-          apartment: data.apartment || "N/A",
-          name4: data.name4,
-          name5: data.name5,
-        },
-        "EsvXMNLAam5FfQTov"
-      )
-      .then(
-        (result) => {
-          if (result.text === "OK") {
-            toast.success("Booking request sent successfully");
-          }
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
     console.log(data);
+    toast.success("Successful");
   };
+
   const contactCards = [
     {
       name: "Help Center",
@@ -114,10 +127,11 @@ function Careers() {
             <Formik
               initialValues={initialValues}
               validationSchema={careerSchema}
-              onSubmit={(values, { resetForm }) => {
-                handleSubmit(values);
-                resetForm();
-              }}
+              // onSubmit={(values, { resetForm }) => {
+              //   handleSubmit(values);
+              //   resetForm();
+              // }}
+              onSubmit={handleSubmit}
             >
               {({ values, errors }) => {
                 // console.log(errors)
@@ -144,7 +158,7 @@ function Careers() {
                               type="text"
                               className="border p-2 w-full bg-gray-100 rounded"
                             />
-                            <FormikError name="name" />
+                            <FormikError name="surname" />
                           </label>
                           <label htmlFor="" className="flex flex-col space-y-1">
                             <p>Email</p>
@@ -154,7 +168,7 @@ function Careers() {
                               type="text"
                               className="border p-2 w-full bg-gray-100 rounded"
                             />
-                            <FormikError name="name" />
+                            <FormikError name="email" />
                           </label>
                           <label htmlFor="" className="flex flex-col space-y-1">
                             <p> Phone number</p>
@@ -164,6 +178,7 @@ function Careers() {
                               type="text"
                               className="border p-2 w-full bg-gray-100 rounded"
                             />
+                            <FormikError name="phone" />
                           </label>
                           <label className="flex flex-col space-y-1">
                             <p> Gender</p>
@@ -177,6 +192,7 @@ function Careers() {
                                 return <option key={index}>{item}</option>;
                               })}
                             </Field>
+                            <FormikError name="gender" />
                           </label>
                           <label className="flex flex-col space-y-1">
                             <p> Nationality</p>
@@ -190,6 +206,7 @@ function Careers() {
                                 return <option key={index}>{item}</option>;
                               })}
                             </Field>
+                            <FormikError name="nationality" />
                           </label>
                           <label className="flex flex-col space-y-1">
                             <p> Identification</p>
@@ -204,6 +221,7 @@ function Careers() {
                               {identification.map((item, index) => {
                                 return <option key={index}>{item}</option>;
                               })}
+                              <FormikError name="identification" />
                             </Field>
                           </label>
                           <label htmlFor="" className="flex flex-col">
@@ -215,6 +233,7 @@ function Careers() {
                                   className="border p-2 w-full bg-gray-100 rounded"
                                   placeholder="Enter Ghana Card number"
                                 />
+                                <FormikError name="ghCard" />
                               </>
                             ) : values.identification === "Passport" ? (
                               <>
@@ -224,6 +243,7 @@ function Careers() {
                                   className="border p-2 w-full bg-gray-100 rounded"
                                   placeholder="Enter Passport number"
                                 />
+                                <FormikError name="passport" />
                               </>
                             ) : (
                               <>
@@ -244,12 +264,14 @@ function Careers() {
                               className="border p-2 w-full bg-gray-100 rounded"
                               placeholder="Enter postal code"
                             />
+                            <FormikError name="post" />
                           </label>
                           <label className="flex flex-col space-y-1">
                             <p className="text-sm font-medium text-gray-600">
                               Upload CV
                             </p>
                             <Field
+                              accept=".pdf"
                               type="file"
                               name="cv"
                               className="border p-2 w-full bg-gray-100 rounded focus:outline-none focus:ring focus:border-blue-300"

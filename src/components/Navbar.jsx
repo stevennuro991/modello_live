@@ -22,7 +22,7 @@ const TopBar = () => {
         <div className="flex  gap-2 items-center ">
           <img className="h-6 w-8" src={clock} alt="" />
           <p className="text-sm">
-            Mon - Fri: 9:00 - 19:00 / Closed on Weekends
+            Mon - Sat: 9:00 - 17:00 / Sunday: 12pm - 18:00
           </p>
         </div>
         <div className="flex  gap-2 items-center ">

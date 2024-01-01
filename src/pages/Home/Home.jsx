@@ -146,15 +146,6 @@ function Home() {
     },
   ];
 
-  const textCards = [
-    {
-      text: "",
-    },
-    {
-      text: "",
-    },
-  ];
-
   const textSlides = [
     {
       image: slide1,
@@ -167,18 +158,6 @@ function Home() {
     },
   ];
 
-  const incrementIndex = () => {
-    return setSlideIndex((index) => {
-      return index > textSlides.length - 2 ? 0 : index + 1;
-    });
-  };
-
-  const decrementIndex = () => {
-    return setSlideIndex((index) => {
-      return index === 0 ? textSlides.length - 1 : index - 1;
-    });
-  };
-
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setSlideIndex((index) => {
@@ -189,146 +168,6 @@ function Home() {
     return () => clearInterval(slideInterval);
   }, [slideIndex, textSlides.length]);
 
-  const carTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setCarType(e.target.value);
-        }}
-      >
-        <option value="Select Car Type">Select Car Type</option>
-        <option value="Sedan/Saloon">Sedan/Saloon</option>
-        <option value="Mini SUV's">Mini SUV's</option>
-        <option value="SUV's">SUV's</option>
-        <option value="Trucks">Trucks</option>
-      </select>
-    </>
-  );
-  const saloonDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 265)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 435)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 510)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 625)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1030)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 400)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 350)
-        </option>
-      </select>
-    </>
-  );
-  const miniSuvDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 320)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 465)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 540)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 655)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1050)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 500)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 450)
-        </option>
-      </select>
-    </>
-  );
-  const suvDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 370)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 510)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 655)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 770)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1130)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 600)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 550)
-        </option>
-      </select>
-    </>
-  );
-  const truckDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 415)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 625)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 770)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 915)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1230)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 700)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 750)
-        </option>
-      </select>
-    </>
-  );
 
   return (
     <section className="">

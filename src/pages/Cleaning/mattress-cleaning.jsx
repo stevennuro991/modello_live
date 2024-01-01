@@ -17,8 +17,6 @@ import { TiChevronRight } from "react-icons/ti";
 import BookingForm from "../../components/booking_form";
 
 function MattressCleaning() {
-  
-  
   const serviceicons = [
     {
       icon: <GrUserSettings className="text-white text-xl" />,
@@ -28,14 +26,12 @@ function MattressCleaning() {
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
-      description:
-        "Quick, Efficient, Prompt, Expedient, Timely",
+      description: "Quick, Efficient, Prompt, Expedient, Timely",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
-      description:
-        "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
+      description: "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
@@ -73,33 +69,33 @@ function MattressCleaning() {
               <TiChevronRight />
             </div> */}
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="apartment-cleaning">Apartment Cleaning</Link>
+              <Link to="/apartment-cleaning">Apartment Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="sofa-cleaning">Sofa Cleaning</Link>
+              <Link to="/sofa-cleaning">Sofa Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="mattress-cleaning">Mattress Cleaning</Link>
+              <Link to="/mattress-cleaning">Mattress Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="car-cleaning">Car Cleaning</Link>
+              <Link to="/car-cleaning">Car Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="pest-control">Pest Control</Link>
+              <Link to="/pest-control">Pest Control</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="gardening-and-landscaping">
+              <Link to="/gardening-and-landscaping">
                 Gardening Maintenance and Landscaping
               </Link>
               <TiChevronRight />
             </div>
             <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="industrial-cleaning">Industrial Cleaning</Link>
+              <Link to="/industrial-cleaning">Industrial Cleaning</Link>
               <TiChevronRight />
             </div>
           </div>
@@ -168,7 +164,6 @@ function MattressCleaning() {
                     <IoCheckmarkCircle />
                     <p>Mattress Protector</p>
                   </div>
-           
                 </div>
               </div>
             </div>
@@ -202,11 +197,8 @@ function MattressCleaning() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
 
 export default MattressCleaning;
-
-

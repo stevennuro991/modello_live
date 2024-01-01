@@ -200,25 +200,23 @@ function IndustrialCleaning() {
     {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Experienced Staff",
-      description: "Rule first third above first treeth  the replenish.",
+      description: "Skilled, Knowledgeable, Professional, Efficient, Reliable",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
-      description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+      description: "Quick, Efficient, Prompt, Expedient, Timely",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
-      description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+      description: "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
       name: "Best Equipment",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Advanced, High-quality, Innovative, Reliable, State-of-the-art",
     },
   ];
   return (
@@ -270,7 +268,9 @@ function IndustrialCleaning() {
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/gardening-and-landscaping">Gardening Maintenance and Landscaping</Link>
+              <Link to="/gardening-and-landscaping">
+                Gardening Maintenance and Landscaping
+              </Link>
               <TiChevronRight />
             </div>
             <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
@@ -340,7 +340,7 @@ function IndustrialCleaning() {
                       <option value="Pest Control Service">
                         Pest Control Service
                       </option>
-                    
+
                       <option value="Industrial Cleaning">
                         Industrial Cleaning
                       </option>
@@ -386,16 +386,18 @@ function IndustrialCleaning() {
             src={cleaninservice}
             alt=""
           />
-          <h1 className="md:text-2xl font-bold">
-            No matter how messy it is, we do the best.
-          </h1>
+          <h1 className="md:text-2xl font-bold">MODE OF OPERATIONS</h1>
           <p className="md:pr-44">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            Whenever a customer requests for our cleaning or any of our building
+            maintenance services, an initial deposit si going to be paid upfront
+            and this covers site visits, assessment, inspection and quote
+            provision. The client will pay this fee when an agreement has been
+            made for a team to visit the site. It is worth noting that this
+            initial deposit shall be part of the final quote presented after the
+            site visit. The time for presenting the quote however varies but
+            takes a minimum of 24 hours maximum of 72 hours. This initial
+            deposit is largely dependent on the location of the customer and the
+            prices for that are expounded below
           </p>
           <div className="w-full flex flex-col md:flex-row h-fit md:py-5 justify-between">
             <div className="md:w-[60%] md:h-[600px]">
@@ -445,12 +447,13 @@ function IndustrialCleaning() {
           </div>
           <div className="md:pr-44">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Industrial cleaning employs specialized equipment to remove
+              contaminants from industrial facilities, ensuring a safe and
+              hygienic work environment. The process utilizes tools like
+              pressure washers and chemical cleaners to comply with regulations
+              and extend the lifespan of machinery. These services are crucial
+              for preventing accidents, maintaining productivity, and meeting
+              industry cleanliness standards.
             </p>
           </div>
           <div className="grid md:grid-cols-2 w-full place-items-center md:gap-10 gap-2">
@@ -524,7 +527,6 @@ function IndustrialCleaning() {
               </label>
             </div>
             <div className="w-full flex flex-col space-y-10">
-            
               <label htmlFor="" className="flex flex-col space-y-1">
                 <p> Number of washrooms</p>
                 <input

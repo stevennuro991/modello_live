@@ -102,7 +102,7 @@ function PestControl() {
               <TiChevronRight />
             </div>
           </div>
-          <div className="w-full border-2 border-black h-[400px] rounded-xl service-img relative">
+          <div className="w-full border-2 border-black h-[400px] rounded-xl service-img relative md:mb-[300px]">
             <div className="w-full h-full bg-indigo-900 opacity-70 rounded-xl absolute flex flex-col items-center justify-center"></div>
             <div className="w-full h-full rounded-xl absolute flex flex-col items-center justify-center p-16">
               <p className="text-white z-50 text-[36px] text-center">
@@ -123,10 +123,10 @@ function PestControl() {
           />
           <h1 className="md:text-2xl font-bold">Pest Control</h1>
           <p className="md:pr-44">
-            Our pest control services at Modello encompass
-            eco-friendly residential and commercial solutions, termite control,
-            integrated pest management, and emergency response, all delivered by
-            certified professionals using the latest technology.
+            Our pest control services at Modello encompass eco-friendly
+            residential and commercial solutions, termite control, integrated
+            pest management, and emergency response, all delivered by certified
+            professionals using the latest technology.
           </p>
           <div className="w-full flex flex-col md:flex-row h-fit md:py-5 justify-between">
             <div className="md:w-[60%] md:h-[600px]">
@@ -166,7 +166,6 @@ function PestControl() {
                     <IoCheckmarkCircle />
                     <p>Follow-Up</p>
                   </div>
-                 
                 </div>
               </div>
             </div>
@@ -207,6 +206,3 @@ function PestControl() {
 }
 
 export default PestControl;
-
-
-

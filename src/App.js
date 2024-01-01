@@ -82,8 +82,6 @@
 
 // export default App;
 
-
-
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "../src/pages/Home/Home";
 import About from "../src/pages/AboutUs/About";
@@ -99,10 +97,9 @@ import CarCleaning from "./pages/Cleaning/domestic-cleaning";
 import IndustrialCleaning from "./pages/Cleaning/industrial-cleaning";
 import GardeningAndLandscaping from "./pages/Cleaning/gardening-and-landscaping";
 import PestControl from "./pages/Cleaning/pest-control";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 import DomesticCleaning from "./pages/Cleaning/domestic-cleaning";
 import Careers from "./pages/ careers/careers";
-
 
 function App() {
   return (
@@ -120,15 +117,20 @@ function App() {
           <Route path="mattress-cleaning" element={<MattressCleaning />} />
           <Route path="car-cleaning" element={<CarCleaning />} />
           <Route path="industrial-cleaning" element={<IndustrialCleaning />} />
-          <Route path="gardening-and-landscaping" element={<GardeningAndLandscaping />} />
+          <Route
+            path="gardening-and-landscaping"
+            element={<GardeningAndLandscaping />}
+          />
           <Route path="pest-control" element={<PestControl />} />
-          <Route path="domestic-and-commercial-cleaning" element={<DomesticCleaning/>} />
-          <Route path="careers" element={<Careers/>} />
+          <Route
+            path="domestic-and-commercial-cleaning"
+            element={<DomesticCleaning />}
+          />
+          <Route path="careers" element={<Careers />} />
         </Route>
       </Routes>
       <Toaster />
     </HashRouter>
-
   );
 }
 
