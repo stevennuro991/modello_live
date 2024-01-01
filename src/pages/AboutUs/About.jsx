@@ -1,6 +1,6 @@
 import React from "react";
-import banner from "../../assets/images/banner.png";
-import aboutUs from "../../assets/images/aboutus.png";
+import banner from "../../assets/images/slide2.jpeg";
+import aboutUs from "../../assets/images/aboutus.jpeg";
 import missionLogo from "../../assets/icons/mission.svg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";
@@ -10,14 +10,14 @@ function About() {
   return (
     <section>
       <div className="relative">
-        <img src={banner} alt="Banner description" className="w-full" />
-        <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center  left-0 p-8">
+        <img loading="lazy" src={banner} alt="Banner description" className="w-full opacity-60" />
+        <div className=" animate__animated animate__lightSpeedInLeft absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center  left-0 p-8">
           <div className="flex gap-2 items-center">
-            <hr className="bg-white h-[5px] w-[100px]" />
-            <h1 className="text-white text-ls">About us</h1>
+            <hr className="bg-blue-800 h-[5px] w-[100px]" />
+            <h1 className="text-blue-800 text-ls">About us</h1>
           </div>
-          <h1 className="text-white md:text-[48px] leading-tight  font-bold">
-            Caring about your cleaning needs
+          <h1 className="text-blue-800 md:text-[48px] leading-tight  font-bold">
+            Caring About Your Cleaning Needs
           </h1>
           {/* <p className="text-white">
             Hire us! We are a professional cleaning company offering all type of
@@ -36,7 +36,7 @@ function About() {
             Why Will You Choose Our Services?
           </h1>
           <p className="md:w-[500px] pt-2 text-justify">
-            Modello Services is a property maintenance company that was birthed
+            Modello Services is a building maintenance company that was birthed
             in 2018 which pays royalties to Modello and Gem Limited, considered
             one of the leading fabric and PVC vinyl faux leather wholesale
             providers in Ghana, West Africa. The core value of this company is

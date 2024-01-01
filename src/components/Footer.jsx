@@ -26,7 +26,7 @@ const Footer = () => {
               </button>
             </div>
             <p className="text-xs mt-1">
-              Please read terms and Conditions before subscribing to the
+              Please read terms and conditions before subscribing to the
               newsletter.
             </p>
           </div>
@@ -41,8 +41,9 @@ const Footer = () => {
               <img src={logo} alt="" />
             </h5>
             <p className="text-sm">
-              We are professional cleaning company founded in 1997 and providing
-              leading commercial and residential cleaning solutions in the US.
+              We are a professional building maintenance company founded in
+              2018, providing leading commercial and residential building
+              maintenance solution in Ghana.
             </p>
             <p className="text-sm mt-3">
               Mail:{" "}
@@ -52,8 +53,8 @@ const Footer = () => {
             </p>
             <p className="text-sm">
               Call:{" "}
-              <a href="tel:+1 970 524 5455" className="underline">
-                +1 970 524 5455
+              <a href="tel:0544938851/0241688813" className="underline">
+                0544938851/0241688813
               </a>
             </p>
             {/* Social Icons */}
@@ -102,7 +103,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-blue-800 text-center py-4 mt-4">
           <p className="text-xs">
-            © 2023 - Modello. Modello Copyrights Reserved | Corporate website
+            © 2024 - Modello. Modello Copyrights Reserved | Corporate website
             Modello
           </p>
         </div>

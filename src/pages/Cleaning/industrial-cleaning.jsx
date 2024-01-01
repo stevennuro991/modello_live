@@ -245,10 +245,10 @@ function IndustrialCleaning() {
               <hr className="bg-black h-[5px] w-[100px]" />
               <h1 className="text-black uppercase">our services</h1>
             </div>
-            <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
+            {/* <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
               <Link to="/cleaning-service">Home Cleaning</Link>
               <TiChevronRight />
-            </div>
+            </div> */}
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
               <Link to="/apartment-cleaning">Apartment Cleaning</Link>
               <TiChevronRight />
@@ -340,9 +340,7 @@ function IndustrialCleaning() {
                       <option value="Pest Control Service">
                         Pest Control Service
                       </option>
-                      <option value="Car Washing and Detailing">
-                        Car Washing and Detailing
-                      </option>
+                    
                       <option value="Industrial Cleaning">
                         Industrial Cleaning
                       </option>
@@ -526,13 +524,7 @@ function IndustrialCleaning() {
               </label>
             </div>
             <div className="w-full flex flex-col space-y-10">
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Zip code</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
+            
               <label htmlFor="" className="flex flex-col space-y-1">
                 <p> Number of washrooms</p>
                 <input

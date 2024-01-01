@@ -118,13 +118,7 @@ function Contact() {
                     className="border p-2 w-full bg-gray-100 rounded"
                   />
                 </label>
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p> ZIP code</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
+            
                 <label htmlFor="" className="flex flex-col space-y-1">
                   <p> Choose a service</p>
                   <input
@@ -174,7 +168,6 @@ function Contact() {
           );
         })}
       </div>
-      <div className="w-full h-[700px] bg-black text-white p-20">Map area</div>
     </section>
   );
 }

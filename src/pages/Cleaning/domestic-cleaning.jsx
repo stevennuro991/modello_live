@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import banner from "../../assets/images/apartmentBanner.jpeg";
+import banner from "../../assets/images/banner.png";
 import hover from "../../assets/images/Clean-The-Floors.jpg";
-import cleaninservice from "../../assets/images/apartment.jpeg";
+import cleaninservice from "../../assets/images/man-cleaning-office-window-medium-shot.jpg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";
 import builderLogo from "../../assets/icons/builder.svg";
@@ -16,49 +16,46 @@ import { Link } from "react-router-dom";
 import { TiChevronRight } from "react-icons/ti";
 import BookingForm from "../../components/booking_form";
 
-function ApartmentCleaning() {
- 
-
+function DomesticCleaning() {
   const serviceicons = [
     {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Experienced Staff",
-      description: "Skilled, Knowledgeable, Professional, Efficient, Reliable",
+      description: "Rule first third above first treeth  the replenish.",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
       description:
-        "Quick, Efficient, Prompt, Expedient, Timely",
+        "If you have a great idea, or something to discuss - we are ready to help.",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
       description:
-        "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
+        "If you have a great idea, or something to discuss - we are ready to help.",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
       name: "Best Equipment",
       description:
-        "Advanced, High-quality, Innovative, Reliable, State-of-the-art",
+        "If you have a great idea, or something to discuss - we are ready to help.",
     },
   ];
-
   return (
     <section>
       <div className="relative">
-        <img src={banner} alt="Banner description" className="w-full h-[500px]" />
+        <img src={banner} alt="Banner description" className="w-full" />
         <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center md:left-0 p-8">
           <h1 className="text-white md:text-[48px] leading-tight  font-bold">
-            APARTMENT cleaning
+          Domestic and Commercial Cleaning
           </h1>
           <div className="flex space-x-3 items-center text-gray-50 font-extralight">
             <p>Home</p>
             <FaChevronRight />
             <p>Services</p>
             <FaChevronRight />
-            <p>Apartment Cleaning</p>
+            <p>Domestic and Commercial Cleaning</p>
           </div>
         </div>
       </div>
@@ -117,20 +114,22 @@ function ApartmentCleaning() {
           </div>
           <BookingForm />
         </div>
-        <div className="md:w-[60%] md:mr-40 space-y-20 p-5 me:p-0">
+        <div className="md:w-[60%] md:mr-40 space-y-10 p-5 me:p-0">
           <img
-            className="md:h-[500px] md:w-[100%]"
+            className="md:h-[500px] md:w-[90%]"
             src={cleaninservice}
             alt=""
           />
-          <h1 className="md:text-2xl font-bold">Apartment Cleaning</h1>
+          <h1 className="md:text-2xl font-bold">
+            Domestic and Commercial Cleaning
+          </h1>
           <p className="md:pr-44">
-            Deep apartment cleaning is done once a month. This includes:
-            Vacuuming and Dusting, Polishing of doors & surfaces, Disinfection,
-            cobweb removal, & Cabinet cleaning, folding of laundry. Microwave &
-            fridge cleaning, Toiletries & air freshener replacement, Furniture
-            polishing. Glass & light cleaning and removal of waste from indoors
-            to outdoors dumpster.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
           </p>
           <div className="w-full flex flex-col md:flex-row border h-fit md:py-5 justify-between">
             <div className="md:w-[60%] md:h-[600px]">
@@ -144,27 +143,35 @@ function ApartmentCleaning() {
                 <div className="flex flex-col space-y-5">
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Declutter and Organize:</p>
+                    <p>Recurring Cleaning</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Dusting and Wiping Surfaces:</p>
+                    <p>Occasional Cleaning</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Vacuuming and Mopping Floors:</p>
+                    <p>Apartment Cleaning</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Kitchen and Bathroom Cleaning:</p>
+                    <p>Special Event Cleaning</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Glass and Mirror Cleaning:</p>
+                    <p>Housekeeping Services</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Final Touches and Refresh:</p>
+                    <p>Move Out & Move in Cleaning</p>
+                  </div>
+                  <div className="flex space-x-2 items-center ">
+                    <IoCheckmarkCircle />
+                    <p>Refrigerator Cleaning</p>
+                  </div>
+                  <div className="flex space-x-2 items-center ">
+                    <IoCheckmarkCircle />
+                    <p>Oven Cleaning.</p>
                   </div>
                 </div>
               </div>
@@ -172,9 +179,12 @@ function ApartmentCleaning() {
           </div>
           <div className="md:pr-44">
             <p>
-              Remember, regular maintenance is key to keeping your apartment
-              consistently clean and manageable. Adopting a cleaning schedule
-              can help keep tasks from becoming overwhelming.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
           </div>
           <div className="grid md:grid-cols-2 w-full place-items-center md:gap-10 gap-2">
@@ -203,4 +213,4 @@ function ApartmentCleaning() {
   );
 }
 
-export default ApartmentCleaning;
+export default DomesticCleaning;

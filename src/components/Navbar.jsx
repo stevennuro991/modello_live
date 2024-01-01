@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/modello.png";
 import xmasLogo from "../assets/images/xmas_logo.png";
 import instagram from "../assets/icons/instagram.svg";
@@ -16,7 +17,7 @@ const TopBar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex  gap-2 items-center ">
           <img className="h-6 w-8" src={phone} alt="" />
-          <p className="text-sm">(+233) 547 898 6097/(+233) 24 168 8813</p>
+          <p className="text-sm">0544938851/0241688813</p>
         </div>
         <div className="flex  gap-2 items-center ">
           <img className="h-6 w-8" src={clock} alt="" />
@@ -72,38 +73,15 @@ const Navbar = ({ setScroll }) => {
       <TopBar />
       <nav className="hidden md:block bg-blue-300 text-white py-1">
         <div className="container mx-auto flex items-center justify-between">
-          {/* Logo and Navigation Links */}
           <div className="flex items-center space-x-10">
             <div className="text-xl font-bold">
-              <img height="100" width="100" src={xmasLogo} alt="" />
+              <img height="100" width="100" src={xmasLogo} alt="Xmas Logo" />
             </div>
             <div className="hidden md:flex space-x-4">
-              <a
-                href="/"
-                className="px-3 py-2 rounded-md text-white text-ls font-medium"
-              >
-                Home
-              </a>
-              <a
-                href="/about"
-                className="px-3 py-2 rounded-md text-ls text-white font-medium"
-              >
-                About
-              </a>
-              <a
-                href="/service"
-                className="px-3 py-2 rounded-md text-white text-ls font-medium"
-              >
-                Services
-              </a>
-              {/* <a href="/pricing" className="px-3 py-2 rounded-md text-ls text-white font-medium">Pricing</a> */}
-              <a
-                href="/contact"
-                className="px-3 py-2 rounded-md text-ls text-white font-medium"
-              >
-                Contact Us
-              </a>
-              {/* Other navigation items */}
+              <Link to="/" className="px-3 py-2 rounded-md text-white text-ls font-medium">Home</Link>
+              <Link to="/about" className="px-3 py-2 rounded-md text-ls text-white font-medium">About</Link>
+              <Link to="/service" className="px-3 py-2 rounded-md text-white text-ls font-medium">Services</Link>
+              <Link to="/contact" className="px-3 py-2 rounded-md text-ls text-white font-medium">Contact Us</Link>
             </div>
           </div>
         </div>
@@ -150,30 +128,10 @@ const Navbar = ({ setScroll }) => {
               </div>
 
               <div className="md:hidden flex flex-col items-center justify-center space-y-5 my-10">
-                <a
-                  href="/"
-                  className="px-3 py-2 rounded-md text-white text-ls font-medium"
-                >
-                  Home
-                </a>
-                <a
-                  href="/about"
-                  className="px-3 py-2 rounded-md text-ls text-white font-medium"
-                >
-                  About
-                </a>
-                <a
-                  href="/service"
-                  className="px-3 py-2 rounded-md text-white text-ls font-medium"
-                >
-                  Services
-                </a>
-                <a
-                  href="/contact"
-                  className="px-3 py-2 rounded-md text-ls text-white font-medium"
-                >
-                  Contact Us
-                </a>
+                  <Link to="/" className="px-3 py-2 rounded-md text-white text-ls font-medium">Home</Link>
+                <Link to="/about" className="px-3 py-2 rounded-md text-ls text-white font-medium">About</Link>
+                <Link to="/service" className="px-3 py-2 rounded-md text-white text-ls font-medium">Services</Link>
+                <Link to="/contact" className="px-3 py-2 rounded-md text-ls text-white font-medium">Contact Us</Link>
               </div>
             </div>
             {/* <div className="hidden md:flex space-x-4">
@@ -210,3 +168,6 @@ const Navbar = ({ setScroll }) => {
 };
 
 export default Navbar;
+
+
+// (+233) 547 898 6097

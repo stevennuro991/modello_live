@@ -24,9 +24,11 @@ import service5 from "../../assets/images/AdobeStock-RqF2ztT0gI.jpg";
 import service6 from "../../assets/images/ixtR4JdzySzNOZbBcECKfrWdwnzoKLET1622049616.webp";
 import service8 from "../../assets/images/30978327be125ef27a4acdea5899e0552088923e.png";
 import service7 from "../../assets/images/hedge-trimming.jpg";
-import slide1 from "../../assets/images/8bdf786268 copy.jpg";
-import slide2 from "../../assets/images/Clean-The-Floors.jpg";
-import slide3 from "../../assets/images/full-shot-men-cleaning-office.jpg";
+import slide1 from "../../assets/images/slide1.jpeg";
+import slide2 from "../../assets/images/slide5.jpeg";
+import slide3 from "../../assets/images/slide4.jpeg";
+import BookingForm from "../../components/booking_form"
+
 
 function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -54,12 +56,12 @@ function Home() {
     },
   ];
   const serviceCards = [
-    {
-      image: service1,
-      name: "Home Cleaning",
-      pricing: "Starting from 20cedis",
-      link: "/cleaning-services",
-    },
+    // {
+    //   image: service1,
+    //   name: "Home Cleaning",
+    //   pricing: "Starting from 20cedis",
+    //   link: "/cleaning-services",
+    // },
     {
       image: service2,
       name: "Apartment cleaning",
@@ -78,16 +80,16 @@ function Home() {
       pricing: "Starting from 180cedis",
       link: "/mattress-cleaning",
     },
-    {
-      image: service4,
-      name: "Car Washing and Detailing",
-      pricing: "Starting from 265cedis",
-      link: "/car-cleaning",
-    },
+    // {
+    //   image: service4,
+    //   name: "Car Washing and Detailing",
+    //   pricing: "Starting from 265cedis",
+    //   link: "/car-cleaning",
+    // },
     {
       image: service6,
       name: "Pest Control",
-      pricing: "Starting from 20cedis",
+      pricing: "Starting from 550cedis",
     },
     {
       image: service7,
@@ -124,27 +126,28 @@ function Home() {
     {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Experienced Staff",
-      description: "Rule first third above first treeth  the replenish.",
+      description: "Skilled, Knowledgeable, Professional, Efficient, Reliable",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Quick, Efficient, Prompt, Expedient, Timely",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
       name: "Best Equipment",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Advanced, High-quality, Innovative, Reliable, State-of-the-art",
     },
   ];
+
   const textCards = [
     {
       text: "",
@@ -188,41 +191,6 @@ function Home() {
     return () => clearInterval(slideInterval);
   }, [slideIndex, textSlides.length]);
 
-  const apartmentPricingSelector = (
-    <>
-      <select className="border p-2 w-full bg-gray-100 rounded">
-        <option value="700-800">Select Apartment Type</option>
-        <option value="700-800">1 Bedroom Apartment (GH₵ 700-800)</option>
-        <option value="850-950">2 Bedroom Apartment (GH₵ 850-950)</option>
-        <option value="980-1065">3 Bedroom Apartment (GH₵ 980-1065)</option>
-        <option value="1200-1380">4 Bedroom Apartment (GH₵ 1200-1380)</option>
-      </select>
-    </>
-  );
-
-  const sofaPricingSelector = (
-    <>
-      <select className="border p-2 w-full bg-gray-100 rounded">
-        <option value="450-550">Select sofa type</option>
-        <option value="450-550">Sofa set 3,2,1,1 (GH₵ 450-550)</option>
-        <option value="150-200">2 in 1 sofa (GH₵ 150-200)</option>
-        <option value="980-1065">3 in 1 (GH₵ 250 - 300)</option>
-        <option value="100-150">Sofa 1ps (GH₵ 100-150)</option>
-      </select>
-    </>
-  );
-
-  const matteressPricingSelector = (
-    <>
-      <select className="border p-2 w-full bg-gray-100 rounded">
-        <option value="700-800">Select Mattress Type</option>
-        <option value="450-550">King Size(GH₵ 500)</option>
-        <option value="150-200">Queen Size(GH₵ 450)</option>
-        <option value="980-1065">Standard Size(GH₵ 300)</option>
-        <option value="100-150">Student Matress(GH₵ 180)</option>
-      </select>
-    </>
-  );
   const carTypeselector = (
     <>
       <select
@@ -380,9 +348,10 @@ function Home() {
                 >
                   <div className="flex items-center md:h-[640px] h-[400px] justify-center">
                     <img
+                      loading="lazy"
                       src={textSlides[index]?.image}
                       alt="Banner description"
-                      className="w-full h-full z-0"
+                      className="w-full h-full z-0 opacity-90 object-cover"
                     />
                   </div>
                 </div>
@@ -391,17 +360,17 @@ function Home() {
           })}
           <div className="md:abosulte">
             <img src={banner} alt="Banner description" className="w-full" />
-            <div className="absolute top-20 h-1/2 flex flex-col md:pl-40 md:w-[800px] justify-center md:left-0 p-5 space-y-5">
+            <div className="animate__animated animate__lightSpeedInLeft absolute top-40 h-1/2 flex flex-col md:pl-40 md:w-[800px] justify-center md:left-0 p-5 space-y-5">
               <div className="flex gap-2 items-center">
                 <hr className="bg-white h-[5px] w-[100px]" />
-                <h1 className="text-white text-ls">INTRODUCING MODELLO</h1>
+                <h1 className="text-white text-ls ">INTRODUCING MODELLO</h1>
               </div>
-              <h1 className="text-white md:text-[48px] leading-tight  font-bold md:w-[90%]">
+              <h1 className="text-white md:text-[30px] leading-tight  font-bold md:w-[90%]">
                 Worried about your home & office cleaning?
               </h1>
               <p className="text-white md:w-[60%]">
                 Hire us! We are a professional cleaning company offering all
-                type of cleaning and maintenance services.
+                type of cleaning and building maintenance services.
               </p>
             </div>
           </div>
@@ -420,7 +389,7 @@ function Home() {
               <h1 className="pt-6 md:text-[32px] font-semibold">
                 Why Will You Choose Our Services?
               </h1>
-              <p>
+              <p className="justify-content justify-self-auto">
                 At Modello, we believe that the value of your building is not
                 just in its structure, but in how well it's cared for. Our
                 comprehensive range of services - from general cleaning to
@@ -442,7 +411,7 @@ function Home() {
                 your property.
               </p>
               <Link
-                to="/about"
+                to="about"
                 className="text-blue-500 text-sm underline pb-10 cursor-pointer z-50"
               >
                 Learn more about the company
@@ -450,93 +419,10 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="md:w-[50%] h-fit flex justify-center items-center relative md:-mt-60">
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="h-fit w-[100%] bg-gray-200 md:bg-white md:rounded-xl shadow-md flex flex-col items-center space-y-10 p-10">
-              <p className="text-xl"> Book a Service</p>
-              <div className="w-full flex flex-col space-y-6">
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p>Your name</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p> Phone number</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p>Your Location</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p> Choose a service</p>
-                  <select
-                    className="border p-2 w-full bg-gray-100 rounded"
-                    onChange={(e) => {
-                      setBookingType(e.target.value);
-                    }}
-                  >
-                    <option value="">Select Service</option>
-
-                    <option value="Apartment Cleaning">
-                      Apartment Cleaning
-                    </option>
-                    <option value="Sofa Cleaning">Sofa Cleaning</option>
-                    <option value="Mattress Cleaning">Mattress Cleaning</option>
-                    <option value="Gardening Maintenance and Landscaping">
-                      Gardening Maintenance and Landscaping
-                    </option>
-                    <option value="Pest Control Service">
-                      Pest Control Service
-                    </option>
-                    <option value="Car Washing and Detailing">
-                      Car Washing and Detailing
-                    </option>
-                    <option value="Industrial Cleaning">
-                      Industrial Cleaning
-                    </option>
-                  </select>
-                  {bookingType === "Apartment Cleaning" &&
-                    apartmentPricingSelector}
-                  {bookingType === "Sofa Cleaning" && sofaPricingSelector}
-                  {bookingType === "Mattress Cleaning" &&
-                    matteressPricingSelector}
-                  {bookingType === "Car Washing and Detailing" &&
-                    carTypeselector}
-                  {carType === "Sedan/Saloon" && saloonDetailsTypeselector}
-                  {carType === "Mini SUV's" && miniSuvDetailsTypeselector}
-                  {carType === "SUV's" && suvDetailsTypeselector}
-                  {detailType === "Trucks" && truckDetailsTypeselector}
-                </label>
-
-                <label htmlFor="datePicker" className="flex flex-col space-y-1">
-                  <p>Date</p>
-                  <input
-                    type="date"
-                    id="datePicker"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-
-                <div className="w-full">
-                  <button className="uppercase w-[100%] bg-blue-500 text-white p-2 flex items-center justify-center rounded-md">
-                    <p>Submit Details</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="md:w-[50%] z-50">
+        <BookingForm/>
         </div>
+       
       </div>
       <div className="bg-contain h-[700px] md:h-[600px] w-[100%] relative md:object-scale-down property-img ">
         <img
@@ -590,7 +476,7 @@ function Home() {
         </div>
         <div className="md:w-[40%] ">
           <p>
-            We are proving all type of cleaning solutions for every small and
+            We are provding all type of cleaning solutions for every small and
             big businesses, organizations and homes
           </p>
         </div>
@@ -635,24 +521,6 @@ function Home() {
           );
         })}
       </div>
-      <div className="relative h-[400px] md:h-full">
-        <img src={banner} alt="Banner description" className="w-full h-full" />
-        <div className="absolute top-10 h-full flex flex-col md:pl-20  w-full md:w-[800px] justify-center md:right-0 md:p-8 p-5 space-y-5 ">
-          <div className="flex gap-2 items-center">
-            <hr className="bg-white h-[5px] w-[100px]" />
-            <h1 className="text-white text-ls">Founders Message</h1>
-          </div>
-          <p className="text-white md:w-[60%]">
-            “Es un hecho establecido hace demasiado tiempo que un lector se
-            distraerá con el contenido del texto de un sitio mientras que mira
-            su diseño. El punto de usar Lorem Ipsum es que tiene una
-            distribución más o menos normal de las letras, al contrario de usar
-            textos como por ejemplo "Contenido aquí,"
-          </p>
-          <p className="text-white md:w-[60%]">Kwame Boakye Founder, Moppers</p>
-        </div>
-      </div>
-
       <div className="flex md:flex-row flex-col md:px-32 md:space-x-20 py-7 p-5">
         <div className="">
           <div className="flex gap-2 items-center">
@@ -662,11 +530,7 @@ function Home() {
           <h1 className="font-bold md:w-[400px] text-4xl pt-6">
             Amazing benefits with us
           </h1>
-          <p className="md:w-[600px] pt-2">
-            Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en
-            una pieza cl´sica de la literatura del Latin
-          </p>
-          <Link to="/" className="text-blue-500 text-sm underline">
+          <Link to="/services" className="text-blue-500 text-sm underline">
             Book a service now
           </Link>
           <div className="grid md:grid-cols-2 w-full md:place-items-center md:gap-10">
@@ -692,8 +556,27 @@ function Home() {
         </div>
         <img className="h-1/2 md:w-1/2" src={aboutUs} alt="" />
       </div>
+      {/* <div className="relative h-[400px] md:h-full">
+        <img src={banner} alt="Banner description" className="w-full h-full" />
+        <div className="absolute top-10 h-full flex flex-col md:pl-20  w-full md:w-[800px] justify-center md:right-0 md:p-8 p-5 space-y-5 ">
+          <div className="flex gap-2 items-center">
+            <hr className="bg-white h-[5px] w-[100px]" />
+            <h1 className="text-white text-ls">Founders Message</h1>
+          </div>
+          <p className="text-white md:w-[60%]">
+            “Es un hecho establecido hace demasiado tiempo que un lector se
+            distraerá con el contenido del texto de un sitio mientras que mira
+            su diseño. El punto de usar Lorem Ipsum es que tiene una
+            distribución más o menos normal de las letras, al contrario de usar
+            textos como por ejemplo "Contenido aquí,"
+          </p>
+          <p className="text-white md:w-[60%]">Kwame Boakye Founder, Moppers</p>
+        </div>
+      </div> */}
 
-      <div className="bg-gray-100 py-20 w-full flex items-center justify-center">
+
+
+      {/* <div className="bg-gray-100 py-20 w-full flex items-center justify-center">
         <div className="md:px-10">
           <div className="flex justify-center gap-2 items-center">
             <hr className="bg-black h-[5px] w-[100px]" />
@@ -719,7 +602,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="bg-contain h-96 w-[100%] relative object-scale-down bg-black property-img ">
         <img
@@ -767,13 +650,7 @@ function Home() {
                   className="border p-2 w-full bg-gray-100 rounded"
                 />
               </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Zip code</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
+            
             </div>
             <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
@@ -808,7 +685,7 @@ function Home() {
           </div>
         </div>
       </div> */}
-      <div className="flex flex-col md:flex-row md:px-60 items-center md:justify-between py-7 space-y-5 p-5">
+      {/* <div className="flex flex-col md:flex-row md:px-60 items-center md:justify-between py-7 space-y-5 p-5">
         <div className="flex flex-col space-y-5 md:w-[40%] ">
           <div className="flex gap-2 items-center w-full justify-start">
             <hr className="bg-black h-[5px] w-[100px]" />
@@ -832,8 +709,8 @@ function Home() {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="grid md:grid-cols-3 w-full place-items-center gap-10 md:px-40 pb-20 p-5 md:p-0">
+      </div> */}
+      {/* <div className="grid md:grid-cols-3 w-full place-items-center gap-10 md:px-40 pb-20 p-5 md:p-0">
         {surroundingCards.map((item, index) => {
           return (
             <Link
@@ -857,16 +734,16 @@ function Home() {
                         {item?.pricing}
                       </h6>
                     </div>
-                    {/* <div className="h-10 w-10 border rounded-full flex items-center justify-center">
+                    <div className="h-10 w-10 border rounded-full flex items-center justify-center">
                       <FaArrowRight className="text-blue-500" />
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
             </Link>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 }

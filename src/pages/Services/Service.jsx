@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import banner from "../../assets/images/banner.png";
+import banner from "../../assets/images/services.jpeg";
 import aboutUs from "../../assets/images/aboutus.png";
 import missionLogo from "../../assets/icons/mission.svg";
 import visionLogo from "../../assets/icons/eye.svg";
@@ -135,76 +135,15 @@ function Service() {
       </select>
     </>
   );
-  const suvDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 370)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 510)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 655)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 770)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1130)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 600)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 550)
-        </option>
-      </select>
-    </>
-  );
-  const truckDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 415)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 625)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 770)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 915)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1230)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 700)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 750)
-        </option>
-      </select>
-    </>
-  );
-
+ 
+ 
   const serviceCards = [
-    {
-      image: service1,
-      name: "Home Cleaning",
-      pricing: "Starting from 20cedis",
-      link: "/cleaning-services",
-    },
+    // {
+    //   image: service1,
+    //   name: "Home Cleaning",
+    //   pricing: "Starting from 20cedis",
+    //   link: "/cleaning-services",
+    // },
     {
       image: service2,
       name: "Apartment cleaning",
@@ -225,9 +164,9 @@ function Service() {
     },
     {
       image: service4,
-      name: "Car Washing and Detailing",
+      name: "Domestic cleaning/Commercial Cleaning",
       pricing: "Starting from 265cedis",
-      link: "/car-cleaning",
+      link: "/domestic-and-commercial-cleaning",
     },
     {
       image: service6,
@@ -238,13 +177,13 @@ function Service() {
     {
       image: service7,
       name: "Gardening Maintenance and Landscaping",
-      pricing: "Starting from 20cedis",
+      pricing: "Starting from 550cedis",
       link: "/gardening-and-landscaping",
     },
     {
       image: service8,
       name: "Industrial cleaning",
-      pricing: "Starting from 20cedis",
+      pricing: "Request a quote",
       link: "/industrial-cleaning",
     },
   ];
@@ -262,7 +201,7 @@ function Service() {
     <section>
       <div className="relative">
         <img src={banner} alt="Banner description" className="w-full" />
-        <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center  md:left-0 md:p-8 p-5 ">
+        <div className="animate__animated animate__lightSpeedInLeft absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center  md:left-0 md:p-8 p-5 ">
           <div className="flex gap-2 items-center">
             <hr className="bg-white h-[5px] w-[100px]" />
             <h1 className="text-white text-ls">Our Services</h1>
@@ -319,7 +258,7 @@ function Service() {
         })}
       </div>
 
-      <div className="bg-gray-100 py-20 w-full flex items-center justify-center">
+      {/* <div className="bg-gray-100 py-20 w-full flex items-center justify-center">
         <div className="md:px-10">
           <div className="flex justify-center gap-2 items-center">
             <hr className="bg-black h-[5px] w-[100px]" />
@@ -345,9 +284,9 @@ function Service() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="bg-contain h-96 w-[100%] relative object-scale-down bg-black property-img ">
+      {/* <div className="bg-contain h-96 w-[100%] relative object-scale-down bg-black property-img ">
         <img
           src={serviceBg}
           alt="..."
@@ -365,8 +304,8 @@ function Service() {
             Be a part of hundreds of happy families
           </h1>
         </div>
-      </div>
-      <div className="w-full h-full flex items-center justify-center bg-transparent md:-mt-40 z-50 relative pb-10">
+      </div> */}
+      {/* <div className="w-full h-full flex items-center justify-center bg-transparent md:-mt-40 z-50 relative pb-10">
         <div className="bg-white md:w-[80%] h-fit border rounded md:p-10">
           <div className="w-full h-full grid md:grid-cols-3 md:gap-40 place-items-center p-5 gap-y-10 md:gap-y-0">
             <div className="w-full flex flex-col space-y-10">
@@ -407,7 +346,7 @@ function Service() {
             </div>
             <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
-                {/* <p> Type of cleaning</p> */}
+                <p> Type of cleaning</p>
                 {bookingType === "Apartment Cleaning" &&
                   apartmentPricingSelector}
                 {bookingType === "Sofa Cleaning" && sofaPricingSelector}
@@ -415,17 +354,11 @@ function Service() {
                   matteressPricingSelector}
                 {bookingType === "Car Washing and Detailing" && carTypeselector}
               </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Zip code</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
+           
             </div>
             <div className="w-full flex flex-col space-y-10">
               <label htmlFor="" className="flex flex-col space-y-1">
-                {/* <p> Total floor area</p> */}
+                <p> Total floor area</p>
                 {carType === "Sedan/Saloon" && saloonDetailsTypeselector}
                 {carType === "Mini SUV's" && miniSuvDetailsTypeselector}
                 {carType === "SUV's" && suvDetailsTypeselector}
@@ -455,7 +388,7 @@ function Service() {
             <div></div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="w-full h-96 py-10">
         <div></div>
       </div> */}
