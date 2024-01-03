@@ -17,7 +17,7 @@ const TopBar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex  gap-2 items-center ">
           <img className="h-6 w-8" src={phone} alt="" />
-          <p className="text-sm">0544938851/0241688813</p>
+          <p className="text-sm">0544938851 / 0241688813</p>
         </div>
         <div className="flex  gap-2 items-center ">
           <img className="h-6 w-8" src={clock} alt="" />
@@ -105,13 +105,13 @@ const Navbar = ({ setScroll }) => {
                 to="/contact"
                 className="px-3 py-2 rounded-md text-ls text-white font-medium"
               >
-                Contact Us
+                Contact us
               </Link>
               <Link
                 to="/careers"
                 className="px-3 py-2 rounded-md text-ls text-white font-medium"
               >
-                Carrers
+                Careers
               </Link>
             </div>
           </div>

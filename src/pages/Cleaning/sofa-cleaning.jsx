@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import banner from "../../assets/images/banner.png";
-import hover from "../../assets/images/Clean-The-Floors.jpg";
+import banner from "../../assets/images/sofabanner.jpeg";
+import hover from "../../assets/images/sofa1.jpeg";
 import cleaninservice from "../../assets/images/sofa.jpeg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";
@@ -46,17 +46,17 @@ function SofaCleaning() {
   return (
     <section>
       <div className="relative">
-        <img src={banner} alt="Banner description" className="w-full" />
+        <img src={banner} alt="Banner description" className="w-full opacity-90" />
         <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center md:left-0 p-8">
           <h1 className="text-white md:text-[48px] leading-tight  font-bold">
             SOFA cleaning
           </h1>
           <div className="flex space-x-3 items-center text-gray-50 font-extralight">
-            <p>Home</p>
-            <FaChevronRight />
-            <p>Services</p>
-            <FaChevronRight />
-            <p>Sofa Cleaning</p>
+            <p className="text-blue-800 text-ls font-bold">Home</p>
+            <FaChevronRight color="blue" />
+            <p className="text-blue-800 text-ls font-bold">Services</p>
+            <FaChevronRight color="blue" />
+            <p className="text-blue-800 text-ls font-bold" >Sofa Cleaning</p>
           </div>
         </div>
       </div>
@@ -67,10 +67,14 @@ function SofaCleaning() {
               <hr className="bg-black h-[5px] w-[100px]" />
               <h1 className="text-black uppercase">our services</h1>
             </div>
-            {/* <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-            <Link to="/cleaning-services">Home Cleaning</Link>
+            <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
+              <Link to="/industrial-cleaning">Industrial Cleaning</Link>
               <TiChevronRight />
-            </div> */}
+            </div>
+                 <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
+              <Link to="/domestic-and-commercial-cleaning">Domestic/Commercial Cleaning</Link>
+              <TiChevronRight />
+            </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
               <Link to="/apartment-cleaning">Apartment Cleaning</Link>
               <TiChevronRight />
@@ -84,35 +88,22 @@ function SofaCleaning() {
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/car-cleaning">Car Cleaning</Link>
+              <Link to="/carpet-cleaning">Carpet Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/pest-control">Pest Control</Link>
+              <Link to="/pest-control">Pest Control & Fumigation Service</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
               <Link to="/gardening-and-landscaping">
-                Gardening Maintenance and Landscaping
+                Gardening, Beautification & Landscaping Services
               </Link>
               <TiChevronRight />
             </div>
-            <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/industrial-cleaning">Industrial Cleaning</Link>
-              <TiChevronRight />
-            </div>
+           
           </div>
-          <div className="w-full border-2 border-black h-[400px] rounded-xl service-img relative">
-            <div className="w-full h-full bg-indigo-900 opacity-70 rounded-xl absolute flex flex-col items-center justify-center"></div>
-            <div className="w-full h-full rounded-xl absolute flex flex-col items-center justify-center p-16">
-              <p className="text-white z-50 text-[36px] text-center">
-                Worried about your home & office cleaning?{" "}
-              </p>
-              <p className="text-white z-50">
-                Hire us for any professional cleaning service{" "}
-              </p>
-            </div>
-          </div>
+         
           <BookingForm />
         </div>
         <div className="md:w-[60%] md:mr-40 space-y-10 p-5 me:p-0">
@@ -135,7 +126,7 @@ function SofaCleaning() {
             <div className="md:w-[40%]">
               <div className="h-full w-full flex flex-col space-y-5 p-5">
                 <h1 className="font bold text-2xl">
-                  Our team prefer it doing with the perfection.
+                Our team prefers doing  it with perfection.
                 </h1>
                 <div className="flex flex-col space-y-5">
                   <div className="flex space-x-2 items-center ">

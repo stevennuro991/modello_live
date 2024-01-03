@@ -4,15 +4,17 @@ import { Formik, Field, Form } from "formik";
 import emailjs from "@emailjs/browser";
 import FormikError from "./formik-error";
 import toast from "react-hot-toast";
+import SuccessDialog from "../../src/components/success_dialog.jsx";
 
 const services = [
   "Domestic Cleaning",
   "Commercial Cleaning",
   "Apartment Cleaning",
+  "Carpet Cleaning",
   "Sofa Cleaning",
   "Mattress Cleaning",
-  "Gardening Maintenance and Landscaping",
-  "Pest Control Service",
+  "Gardening, Beautification & Landscaping Services",
+  "Pest Control & Fumigation Service Service",
 ];
 
 const siteAgreement = [
@@ -29,6 +31,10 @@ const apartmentNewlyBuilt = [
   "2 Bedroom Apartment (Request a quote)",
   "3 Bedroom Apartment (Request a quote)",
   "4 Bedroom Apartment (Request a quote)",
+];
+
+const carpetCleaning = [
+  "Starting at GHC 120.00",
 ];
 
 const apartmentDeepCleaning = [
@@ -56,6 +62,7 @@ const mattressList = [
 
 export default function BookingForm() {
   const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const initialValues = {
     name: "",
     phone: "",
@@ -99,7 +106,9 @@ export default function BookingForm() {
       .then(
         (result) => {
           if (result.text === "OK") {
-            toast.success("Booking request sent successfully");
+            // toast.success("Booking request sent successfully");
+            setLoading(false);
+            setShowSuccess(true);
           }
           console.log(result.text);
         },
@@ -111,6 +120,7 @@ export default function BookingForm() {
   };
 
   return (
+    <>
     <Formik
       initialValues={initialValues}
       validationSchema={name2Schema}
@@ -147,7 +157,7 @@ export default function BookingForm() {
                     />
                   </label>
                   <label htmlFor="" className="flex flex-col space-y-1">
-                    <p>Your Location/Site</p>
+                    <p>Your Site Location</p>
                     <Field
                       as="input"
                       name="location"
@@ -156,7 +166,7 @@ export default function BookingForm() {
                     />
                   </label>
                   <label className="flex flex-col space-y-1">
-                    <p> Choose A Service</p>
+                    <p> Service request </p>
                   </label>
                   <Field
                     as="select"
@@ -228,8 +238,8 @@ export default function BookingForm() {
                     </Field>
                   ) : null}
                   
-                  {(values.name1 === "Pest Control Service" ||
-                    values.name1 === "Gardening Maintenance and Landscaping" ||
+                  {(values.name1 === "Pest Control & Fumigation Service Service" ||
+                    values.name1 === "Gardening, Beautification & Landscaping Services" ||
                     values.name1 === "Domestic Cleaning" ||
                     values.name1 === "Commercial Cleaning") && (
                     <>
@@ -249,9 +259,9 @@ export default function BookingForm() {
                       </Field>
                     </>
                   )}
-                  {values.name1 === "Pest Control Service" && (
+                  {values.name1 === "Pest Control & Fumigation Service Service" && (
                     <label className="flex flex-col space-y-1">
-                      <p>Additional Information for Pest Control</p>
+                      <p>Additional Information for Pest Control & Fumigation Service</p>
                       <Field
                         as="textarea"
                         name="name4"
@@ -260,7 +270,26 @@ export default function BookingForm() {
                       />
                     </label>
                   )}
-                  {values.name1 === "Gardening Maintenance and Landscaping" && (
+                  {(values.name1 === "Carpet Cleaning" 
+                   ) && (
+                    <>
+                      <label className="flex flex-col space-y-1">
+                        <p> Price</p>
+                      </label>
+
+                      <Field
+                        as="select"
+                        name="name5" 
+                        className="border p-2 w-full bg-gray-100 rounded"
+                      >
+                        <option value="">Select Amount</option>
+                        {carpetCleaning.map((item, index) => {
+                          return <option key={index}>{item}</option>;
+                        })}
+                      </Field>
+                    </>
+                  )}
+                  {values.name1 === "Gardening, Beautification & Landscaping Services" && (
                     <label className="flex flex-col space-y-1">
                       <p>Additional Information for Gardening</p>
                       <Field
@@ -322,5 +351,10 @@ export default function BookingForm() {
         );
       }}
     </Formik>
+    <SuccessDialog
+        visible={showSuccess}
+        onClose={() => setShowSuccess(false)}
+      />
+    </>
   );
 }

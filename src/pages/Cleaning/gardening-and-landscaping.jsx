@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import banner from "../../assets/images/banner.png";
-import hover from "../../assets/images/Clean-The-Floors.jpg";
-import cleaninservice from "../../assets/images/man-cleaning-office-window-medium-shot.jpg";
+import banner from "../../assets/images/garden.jpeg";
+import hover from "../../assets/images/gardening.jpeg";
+import cleaninservice from "../../assets/images/hedge-trimming.jpg";
 import visionLogo from "../../assets/icons/eye.svg";
 import teamholder from "../../assets/icons/teamholder.svg";
 import builderLogo from "../../assets/icons/builder.svg";
@@ -17,31 +17,29 @@ import { TiChevronRight } from "react-icons/ti";
 import BookingForm from "../../components/booking_form";
 
 function GardeningAndLandscaping() {
- 
-
   const serviceicons = [
     {
       icon: <GrUserSettings className="text-white text-xl" />,
       name: "Experienced Staff",
-      description: "Rule first third above first treeth  the replenish.",
+      description: "Skilled, Knowledgeable, Professional, Efficient, Reliable",
     },
     {
       icon: <GiDelicatePerfume className="text-white text-xl" />,
       name: "Fast Service ",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Quick, Efficient, Prompt, Expedient, Timely",
     },
     {
       icon: <FaStudiovinari className="text-white text-xl" />,
       name: "Natural products ",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Eco-friendly, Safe, Organic, Non-toxic, Sustainable",
     },
     {
       icon: <FaThumbsUp className="text-white text-xl" />,
       name: "Best Equipment",
       description:
-        "If you have a great idea, or something to discuss - we are ready to help.",
+        "Advanced, High-quality, Innovative, Reliable, State-of-the-art",
     },
   ];
   return (
@@ -50,14 +48,14 @@ function GardeningAndLandscaping() {
         <img src={banner} alt="Banner description" className="w-full" />
         <div className="absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center md:left-0 p-8">
           <h1 className="text-white md:text-[48px] leading-tight  font-bold">
-            Gardening and Landscaoing
+          Gardening, Beautification & Landscaping Services
           </h1>
           <div className="flex space-x-3 items-center text-gray-50 font-extralight">
             <p>Home</p>
             <FaChevronRight />
             <p>Services</p>
             <FaChevronRight />
-            <p>Gardening and Landscaping</p>
+            <p> Gardening, Beautification & Landscaping Services</p>
           </div>
         </div>
       </div>
@@ -68,10 +66,14 @@ function GardeningAndLandscaping() {
               <hr className="bg-black h-[5px] w-[100px]" />
               <h1 className="text-black uppercase">our services</h1>
             </div>
-            {/* <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-            <Link to="/cleaning-services">Home Cleaning</Link>
+            <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
+              <Link to="/industrial-cleaning">Industrial Cleaning</Link>
               <TiChevronRight />
-            </div> */}
+            </div>
+                 <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
+              <Link to="/domestic-and-commercial-cleaning">Domestic/Commercial Cleaning</Link>
+              <TiChevronRight />
+            </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
               <Link to="/apartment-cleaning">Apartment Cleaning</Link>
               <TiChevronRight />
@@ -85,33 +87,22 @@ function GardeningAndLandscaping() {
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/car-cleaning">Car Cleaning</Link>
+              <Link to="/carpet-cleaning">Carpet Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/pest-control">Pest Control</Link>
+              <Link to="/pest-control">Pest Control & Fumigation Service</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/gardening-and-landscaping">Gardening Maintenance and Landscaping</Link>
+              <Link to="/gardening-and-landscaping">
+                Gardening, Beautification & Landscaping Services
+              </Link>
               <TiChevronRight />
             </div>
-            <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/industrial-cleaning">Industrial Cleaning</Link>
-              <TiChevronRight />
-            </div>
+            
           </div>
-          <div className="w-full border-2 border-black h-[400px] rounded-xl service-img relative">
-            <div className="w-full h-full bg-indigo-900 opacity-70 rounded-xl absolute flex flex-col items-center justify-center"></div>
-            <div className="w-full h-full rounded-xl absolute flex flex-col items-center justify-center p-16">
-              <p className="text-white z-50 text-[36px] text-center">
-                Worried about your home & office cleaning?{" "}
-              </p>
-              <p className="text-white z-50">
-                Hire us for any professional cleaning service{" "}
-              </p>
-            </div>
-          </div>
+         
           <BookingForm />
         </div>
         <div className="md:w-[60%] md:mr-40 space-y-10 p-5 me:p-0">
@@ -120,16 +111,14 @@ function GardeningAndLandscaping() {
             src={cleaninservice}
             alt=""
           />
-          <h1 className="md:text-2xl font-bold">
-            No matter how messy it is, we do the best.
-          </h1>
+          <h1 className="md:text-2xl font-bold"> Gardening, Beautification & Landscaping Services</h1>
           <p className="md:pr-44">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+          Gardening, Beautification & Landscaping services involve cultivating plants and designing
+            outdoor spaces for beauty and functionality. Gardening includes
+            planting and maintenance, while landscaping integrates features like
+            paths and ponds. These practices enhance outdoor areas aesthetically
+            and environmentally. They create serene spaces for enjoyment and
+            relaxation.
           </p>
           <div className="w-full flex flex-col md:flex-row h-fit md:py-5 justify-between">
             <div className="md:w-[60%] md:h-[600px]">
@@ -138,40 +127,36 @@ function GardeningAndLandscaping() {
             <div className="md:w-[40%]">
               <div className="h-full w-full flex flex-col space-y-5 p-5">
                 <h1 className="font bold text-2xl">
-                  Our team prefer it doing with the perfection.
+                Our team prefers doing  it with perfection.
                 </h1>
                 <div className="flex flex-col space-y-5">
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Recurring Cleaning</p>
+                    <p>Design and Planning</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Occasional Cleaning</p>
+                    <p>Soil Preparation</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Apartment Cleaning</p>
+                    <p>Plant Selection</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Special Event Cleaning</p>
+                    <p>Planting</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Housekeeping Services</p>
+                    <p>Irrigation System Installation</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Move Out & Move in Cleaning</p>
+                    <p>Hardscaping</p>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <IoCheckmarkCircle />
-                    <p>Refrigerator Cleaning</p>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <IoCheckmarkCircle />
-                    <p>Oven Cleaning.</p>
+                    <p>Mulching</p>
                   </div>
                 </div>
               </div>
@@ -179,12 +164,9 @@ function GardeningAndLandscaping() {
           </div>
           <div className="md:pr-44">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Remember, regular maintenance is key to keeping your apartment
+              consistently clean and manageable. Adopting a cleaning schedule
+              can help keep tasks from becoming overwhelming.
             </p>
           </div>
           <div className="grid md:grid-cols-2 w-full place-items-center md:gap-10 gap-2">
@@ -206,111 +188,6 @@ function GardeningAndLandscaping() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-contain h-96 w-[100%] relative object-scale-down bg-black property-img ">
-        <img
-          src={serviceBg}
-          alt="..."
-          className="h-full w-full object-cover absolute"
-          // onError={() => setImageError(true)}
-        />
-        <div className="bg-blue-900 w-full h-full text-white absolute opacity-70 z-10"></div>
-        <div className="absolute flex w-full h-full justify-center z-20 gap-2 items-center -mt-28">
-          <hr className="bg-white h-[5px] w-[100px]" />
-          <h1 className="text-white uppercase">cost calculator</h1>
-          <hr className="bg-white h-[5px] w-[100px]" />
-        </div>
-        <div className="absolute flex w-full h-full justify-center items-center z-20 gap-2 -mt-16">
-          <h1 className="pt-6 justify-center item-center w-29 text-[32px] md:px-[400px] text-center font-semibold text-white">
-            Be a part of hundreds of happy families
-          </h1>
-        </div>
-      </div>
-      <div className="w-full h-full flex items-center justify-center bg-transparent md:-mt-40 z-50 relative pb-20">
-        <div className="bg-white md:w-[80%] h-fit border rounded md:p-10">
-          <div className="w-full h-full grid md:grid-cols-3 md:gap-40 place-items-center p-5 gap-y-10 md:gap-y-0">
-            <div className="w-full flex flex-col space-y-10">
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p>Choose a servive</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                  placeholder="Gardening and Landscaping"
-                  disabled
-                />
-              </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Your name</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Email Address</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-            </div>
-            <div className="w-full flex flex-col space-y-10">
-            
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Number of washrooms</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Number of garages</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-            </div>
-            <div className="w-full flex flex-col space-y-10">
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Number of beds</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Total floor area</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-              <label htmlFor="" className="flex flex-col space-y-1">
-                <p> Number of rooms</p>
-                <input
-                  type="text"
-                  className="border p-2 w-full bg-gray-100 rounded"
-                />
-              </label>
-            </div>
-          </div>
-          <div className="w-full h-full grid md:grid-cols-3  gap-10 md:gap-40 place-items-center py-10 p-5 md:p-5">
-            <div className="w-full">
-              <button className="uppercase w-[100%] bg-blue-500 text-white p-2 flex items-center justify-center rounded-md">
-                <p>Submit</p>
-              </button>
-            </div>
-            <div>
-              <p className="font-extralight text-sm">
-                Submit this information and we will send you the cost for the
-                service.
-              </p>
-            </div>
-            <div></div>
           </div>
         </div>
       </div>

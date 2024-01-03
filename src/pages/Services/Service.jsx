@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import banner from "../../assets/images/services.jpeg";
+import banner from "../../assets/images/ac.jpg";
 import aboutUs from "../../assets/images/aboutus.png";
 import missionLogo from "../../assets/icons/mission.svg";
 import visionLogo from "../../assets/icons/eye.svg";
@@ -7,10 +7,10 @@ import teamholder from "../../assets/icons/teamholder.svg";
 import builderLogo from "../../assets/icons/builder.svg";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import service1 from "../../assets/images/Building-Maintenance-Technician_resized.jpg";
+import service1 from "../../assets/images/apartmentBanner.jpeg";
 import service2 from "../../assets/images/Commercial-Carpet-Cleaning-Mistakes.jpg";
 import service3 from "../../assets/images/Furniture-Cleaning-Banner.jpg";
-import service4 from "../../assets/images/Locate-a-Car-Detailing-Near-You.jpg";
+import service4 from "../../assets/images/services.jpeg";
 import service5 from "../../assets/images/AdobeStock-RqF2ztT0gI.jpg";
 import service6 from "../../assets/images/disinfection-worker-spraying-subway-staircase-due-covid19-pandemic.jpg";
 import service8 from "../../assets/images/30978327be125ef27a4acdea5899e0552088923e.png";
@@ -18,142 +18,35 @@ import service7 from "../../assets/images/hedge-trimming.jpg";
 import serviceBg from "../../assets/images/disinfection-worker-spraying-subway-staircase-due-covid19-pandemic.jpg";
 
 function Service() {
-  const [bookingType, setBookingType] = useState();
-  const [carType, setCarType] = useState();
-  const [detailType, setDetailType] = useState();
-
-  const apartmentPricingSelector = (
-    <>
-      <select className="border p-2 w-full bg-gray-100 rounded">
-        <option value="700-800">Select Apartment Type</option>
-        <option value="700-800">1 Bedroom Apartment (GH₵ 700-800)</option>
-        <option value="850-950">2 Bedroom Apartment (GH₵ 850-950)</option>
-        <option value="980-1065">3 Bedroom Apartment (GH₵ 980-1065)</option>
-        <option value="1200-1380">4 Bedroom Apartment (GH₵ 1200-1380)</option>
-      </select>
-    </>
-  );
-
-  const sofaPricingSelector = (
-    <>
-      <select className="border p-2 w-full bg-gray-100 rounded">
-        <option value="450-550">Select sofa type</option>
-        <option value="450-550">Sofa set 3,2,1,1 (GH₵ 450-550)</option>
-        <option value="150-200">2 in 1 sofa (GH₵ 150-200)</option>
-        <option value="980-1065">3 in 1 (GH₵ 250 - 300)</option>
-        <option value="100-150">Sofa 1ps (GH₵ 100-150)</option>
-      </select>
-    </>
-  );
-
-  const matteressPricingSelector = (
-    <>
-      <select className="border p-2 w-full bg-gray-100 rounded">
-        <option value="700-800">Select Mattress Type</option>
-        <option value="450-550">King Size(GH₵ 500)</option>
-        <option value="150-200">Queen Size(GH₵ 450)</option>
-        <option value="980-1065">Standard Size(GH₵ 300)</option>
-        <option value="100-150">Student Matress(GH₵ 180)</option>
-      </select>
-    </>
-  );
-  const carTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setCarType(e.target.value);
-        }}
-      >
-        <option value="Select Car Type">Select Car Type</option>
-        <option value="Sedan/Saloon">Sedan/Saloon</option>
-        <option value="Mini SUV's">Mini SUV's</option>
-        <option value="SUV's">SUV's</option>
-        <option value="Trucks">Trucks</option>
-      </select>
-    </>
-  );
-  const saloonDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 265)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 435)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 510)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 625)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1030)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 400)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 350)
-        </option>
-      </select>
-    </>
-  );
-  const miniSuvDetailsTypeselector = (
-    <>
-      <select
-        className="border p-2 w-full bg-gray-100 rounded"
-        onChange={(e) => {
-          setDetailType(e.target.value);
-        }}
-      >
-        <option value="Select Details Type">Select Detailing Type</option>
-        <option value="Interior Detailing and Cleaning">
-          Interior Detailing and Cleaning (GH₵ 320)
-        </option>
-        <option value="Interior and Exterior(Standard)">
-          Interior and Exterior(Standard) (GH₵ 465)
-        </option>
-        <option value="Interior and Exterior(Duluxe)">
-          Interior and Exterior(Duluxe) (GH₵ 540)
-        </option>
-        <option value="Interior and Exterior(Platinum)">
-          Interior and Exterior(Platinum) (GH₵ 655)
-        </option>
-        <option value="Complete Interior and Exterior(Exclusive)">
-          Complete Interior and Exterior(Exclusive) (GH₵ 1050)
-        </option>
-        <option value="Glass Restoration">Glass Restoration (GH₵ 500)</option>
-        <option value="TailLight/HeadLight Restoration">
-          TailLight/HeadLight Restoration (GH₵ 450)
-        </option>
-      </select>
-    </>
-  );
- 
- 
   const serviceCards = [
-    // {
-    //   image: service1,
-    //   name: "Home Cleaning",
-    //   pricing: "Starting from 20cedis",
-    //   link: "/cleaning-services",
-    // },
+    {
+      image: service8,
+      name: "Industrial Cleaning",
+      pricing: "Request a quote",
+      link: "/industrial-cleaning",
+    },
+    {
+      image: service4,
+      name: "Domestic Cleaning / Commercial Cleaning",
+      pricing: "Starting from 700cedis",
+      link: "/domestic-and-commercial-cleaning",
+    },
     {
       image: service2,
-      name: "Apartment cleaning",
+      name: "Carpet Cleaning",
+      pricing: "Starting from 120cedis",
+      link: "/carpet-cleaning",
+    },
+    {
+      image: service1,
+      name: "Apartment Cleaning",
       pricing: "Starting from 700cedis",
       link: "/apartment-cleaning",
     },
     {
       image: service3,
       name: "Sofa Cleaning",
-      pricing: "Starting from 450cedis",
+      pricing: "Starting from 80cedis",
       link: "/sofa-cleaning",
     },
     {
@@ -162,30 +55,20 @@ function Service() {
       pricing: "Starting from 180cedis",
       link: "/mattress-cleaning",
     },
-    {
-      image: service4,
-      name: "Domestic cleaning/Commercial Cleaning",
-      pricing: "Starting from 265cedis",
-      link: "/domestic-and-commercial-cleaning",
-    },
+    
     {
       image: service6,
-      name: "Pest Control",
-      pricing: "Starting from 20cedis",
+      name: "Pest Control & Fumigation Service", 
+      pricing: "Starting from 550cedis",
       link: "/pest-control",
     },
     {
       image: service7,
-      name: "Gardening Maintenance and Landscaping",
+      name: "Gardening, Beautification & Landscaping Services",
       pricing: "Starting from 550cedis",
       link: "/gardening-and-landscaping",
     },
-    {
-      image: service8,
-      name: "Industrial cleaning",
-      pricing: "Request a quote",
-      link: "/industrial-cleaning",
-    },
+   
   ];
 
   const textCards = [
@@ -200,19 +83,18 @@ function Service() {
   return (
     <section>
       <div className="relative">
-        <img src={banner} alt="Banner description" className="w-full" />
+        <img src={banner} alt="Banner description" className="w-full opacity-75" />
         <div className="animate__animated animate__lightSpeedInLeft absolute md:top-20 top-0 h-full flex flex-col md:pl-20 md:w-[800px] justify-center  md:left-0 md:p-8 p-5 ">
           <div className="flex gap-2 items-center">
-            <hr className="bg-white h-[5px] w-[100px]" />
-            <h1 className="text-white text-ls">Our Services</h1>
+          <hr className="bg-blue-800 h-[5px] w-[100px]" />
+            <h1 className="text-blue-800 text-ls">Our Services</h1>
           </div>
-          <h1 className="text-white md:text-[48px] leading-tight  md:font-bold">
-            Professional cleaning services for your homes and offices
+          <h1 className="text-blue-800 md:text-[48px] leading-tight  md:font-bold">
+          Professional building maintenance services for your facilities.
           </h1>
-          <p className="text-white hidden md:block md:w-[60%]">
-            We are a professional cleaning company founded in 1997 and providing
-            leading commercial and residential cleaning solutions in the United
-            States.
+          <p className="text-blue-800 hidden md:block md:w-[60%]">
+          We are a professional building maintenance company founded in 2018 and providing
+            leading commercial and residential building maintenance solutions in Ghana, West Africa.
           </p>
         </div>
       </div>
@@ -220,11 +102,11 @@ function Service() {
       <div className="flex flex-col px-12 justify-between py-7 space-y-5">
         <div className="flex gap-2 items-center w-full justify-center">
           <hr className="bg-black h-[5px] w-[80px]" />
-          <h1 className="text-black uppercase">our sevices</h1>
+          <h1 className="text-black uppercase">our services</h1>
           <hr className="bg-black h-[5px] w-[80px]" />
         </div>
         <h1 className="flex justify-center items-center  text-3xl font-semibold  text-center">
-          We are providing all kind of cleaning services
+        We provide all kinds of building maintenance needs
         </h1>
       </div>
       <div className="grid md:grid-cols-3 w-full  gap-y-10 place-items-center pb-40 p-10 md:px-60">
@@ -322,11 +204,11 @@ function Service() {
                   <option value="Apartment Cleaning">Apartment Cleaning</option>
                   <option value="Sofa Cleaning">Sofa Cleaning</option>
                   <option value="Mattress Cleaning">Mattress Cleaning</option>
-                  <option value="Gardening Maintenance and Landscaping">
-                    Gardening Maintenance and Landscaping
+                  <option value="Gardening, Beautification & Landscaping services">
+                    Gardening, Beautification & Landscaping services
                   </option>
-                  <option value="Pest Control Service">
-                    Pest Control Service
+                  <option value="Pest Control & Fumigation Service Service">
+                    Pest Control & Fumigation Service Service
                   </option>
                   <option value="Car Washing and Detailing">
                     Car Washing and Detailing

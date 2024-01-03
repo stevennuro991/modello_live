@@ -9,6 +9,31 @@ import FormikError from "../../components/formik-error";
 function Careers() {
   const [loading, setLoading] = useState(false);
 
+  const jobVacancies = [
+    {
+      title: "Human Resource Manager",
+
+      type: "Full Time",
+    },
+    {
+      title: "Compliance Officer",
+
+      type: "Full Time",
+    },
+    {
+      title: "Accountant",
+
+      type: "Full Time",
+    },
+
+    {
+      title: "Marketing Manager",
+
+      type: "Full Time",
+    },
+
+  ];
+
   const initialValues = {
     name: "",
     surname: "",
@@ -45,40 +70,7 @@ function Careers() {
   ];
   const identification = ["Ghana Card", "Passport"];
 
-  // const handleSubmit = (data) => {
-  //   setLoading(true);
-  //   emailjs
-  //     .send(
-  //       "service_rdpth8m",
-  //       "template_8qv5lzn",
-  //       {
-  //         name: data.name,
-  //         surname: data.surname,
-  //         phone: data.phone,
-  //         email: data.email,
-  //         gender: data.gender,
-  //         nationality: data.nationality,
-  //         identification: data.identification,
-  //         ghCard: data.ghCard,
-  //         passport: data.passport,
-  //         post: data.post,
-  //       },
-  //       "EsvXMNLAam5FfQTov"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         if (result.text === "OK") {
-  //           toast.success("Succesful");
-  //         }
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  //   console.log(data);
-  // };
-
+  
   const handleSubmit = (data) => {
     console.log(data);
     toast.success("Successful");
@@ -297,28 +289,19 @@ function Careers() {
           </div>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 w-full place-items-center pb-40 md:px-40 md:gap-10 gap-2 p-5">
-        {contactCards.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="md:w-[400px] h-72 hover:scale-[1.02] duration-150"
-            >
-              <div className="flex w-full h-full border relative hover:cursor-pointer p-5 flex-col justify-center items-center shadow-md bg-cover object-contain  bg-gradient-to-r from-[#090071] to-[#6480DF] space-y-5 rounded-md">
-                <p className="text-white text-2xl font-bold">{item?.name}</p>
-                <p className="text-white text-center text-[22px] font-extralight">
-                  {item?.description}
-                </p>
-                <div className="w-[50%]">
-                  <button className="uppercase w-[100%] bg-[#EEB000] text-white p-2 flex items-center justify-center rounded-md">
-                    <p className="uppercase">Call Us</p>
-                  </button>
-                </div>
-              </div>
+      <div className="bg-gray-100 py-10 px-5 md:px-20">
+        <h2 className="text-2xl font-bold text-center mb-8">Current Openings</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          {jobVacancies.map((job, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold">{job.title}</h3>
+              <p className="text-gray-500">{job.type}</p>
+           
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
+   
     </section>
   );
 }

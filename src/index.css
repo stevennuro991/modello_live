@@ -14,3 +14,19 @@
     background-size: cover;
     /* opacity */
 }
+
+.sofa-img {
+    background-image : url("../src/assets/images/sofa.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity */
+}
+
+.carpet-img {
+    background-image : url("../src/assets/images/carpet4.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity */
+}

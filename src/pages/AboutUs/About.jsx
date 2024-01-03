@@ -17,7 +17,7 @@ function About() {
             <h1 className="text-blue-800 text-ls">About us</h1>
           </div>
           <h1 className="text-blue-800 md:text-[48px] leading-tight  font-bold">
-            Caring About Your Cleaning Needs
+          Caring about your building maintenance needs
           </h1>
           {/* <p className="text-white">
             Hire us! We are a professional cleaning company offering all type of
@@ -33,7 +33,7 @@ function About() {
             <h1 className="text-black">About us</h1>
           </div>
           <h1 className="font-bold md:w-[400px] md:text-4xl pt-6">
-            Why Will You Choose Our Services?
+          Why Choose Us?
           </h1>
           <p className="md:w-[500px] pt-2 text-justify">
             Modello Services is a building maintenance company that was birthed
@@ -43,7 +43,7 @@ function About() {
             to bring convenience to customers and clients while ensuring they
             get value for services. Out of this company, sub-departments were
             formed to properly map out and tackle each societal assistance with
-            great professionalism and skills..
+            great professionalism and skills.
           </p>
         </div>
         <img className="md:h-1/2 md:w-1/2" src={aboutUs} alt="" />

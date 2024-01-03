@@ -1,6 +1,7 @@
 import React from "react";
 
 import logo from "../assets/images/modello.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -54,7 +55,7 @@ const Footer = () => {
             <p className="text-sm">
               Call:{" "}
               <a href="tel:0544938851/0241688813" className="underline">
-                0544938851/0241688813
+                0544938851 / 0241688813
               </a>
             </p>
             {/* Social Icons */}
@@ -84,20 +85,52 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
+              <li>
+              <Link to="/careers">Careers</Link>
+              </li>
             </ul>
           </div>
 
           {/* Column 3 */}
           <div className="hidden md:block">
             <h5 className="font-bold text-lg mb-3">Services</h5>
-            <ul className="text-sm">{/* Repeat your services here */}</ul>
+            <ul className="text-sm">  
+            <li>
+                 <Link to="/industrial-cleaning">Industrial Cleaning</Link>
+              </li>
+              <li>
+              <Link to="/apartment-cleaning">Apartment Cleaning</Link>
+              </li>
+              <li>
+                 <Link to="/sofa-cleaning">Sofa Cleaning</Link>
+              </li>
+              <li>
+               <Link to="/mattress-cleaning">Mattress Cleaning</Link>
+              </li>
+              <li>
+                 <Link to="/carpet-cleaning">Carpet Cleaning</Link>
+              </li>
+              <li>
+               <Link to="/pest-control">Pest Control & Fumigation Service</Link>
+              </li>
+            
+              <li>
+              <Link to="/gardening-and-landscaping">
+                Gardening, Beautification & Landscaping Services
+              </Link>
+              </li>
+         
+               </ul>
           </div>
 
-          {/* Column 4 */}
-          <div className="hidden md:block">
-            <h5 className="font-bold text-lg mb-3">Recent Post</h5>
-            <ul className="text-sm">{/* List recent posts here */}</ul>
-          </div>
+         
+
+  
+ 
+ 
+
+
+
         </div>
 
         {/* Copyright Section */}

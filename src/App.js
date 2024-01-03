@@ -100,6 +100,7 @@ import PestControl from "./pages/Cleaning/pest-control";
 import { Toaster } from "react-hot-toast";
 import DomesticCleaning from "./pages/Cleaning/domestic-cleaning";
 import Careers from "./pages/ careers/careers";
+import CarpetCleaning from "./pages/Cleaning/carpet_cleaning";
 
 function App() {
   return (
@@ -117,6 +118,7 @@ function App() {
           <Route path="mattress-cleaning" element={<MattressCleaning />} />
           <Route path="car-cleaning" element={<CarCleaning />} />
           <Route path="industrial-cleaning" element={<IndustrialCleaning />} />
+          <Route path="carpet-cleaning" element={<CarpetCleaning />} />
           <Route
             path="gardening-and-landscaping"
             element={<GardeningAndLandscaping />}

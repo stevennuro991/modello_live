@@ -68,7 +68,7 @@ function Cleaning() {
               <h1 className="text-black uppercase">our services</h1>
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/cleaning-services">Home Cleaning</Link>
+              <Link to="/domestic-and-commercial-cleaning">Domestic/Commercial Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
@@ -84,15 +84,15 @@ function Cleaning() {
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/car-cleaning">Car Cleaning</Link>
+              <Link to="/carpet-cleaning">Carpet Cleaning</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/pest-control">Pest Control</Link>
+              <Link to="/pest-control">Pest Control & Fumigation Service</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 border-b flex items-center justify-between hover:shadow-sm cursor-pointer">
-              <Link to="/gardening-and-landscaping">Gardening Maintenance and Landscaping</Link>
+              <Link to="/gardening-and-landscaping">Gardening, Beautification & Landscaping Services</Link>
               <TiChevronRight />
             </div>
             <div className="py-5 flex items-center justify-between hover:shadow-sm cursor-pointer">
@@ -107,7 +107,7 @@ function Cleaning() {
                 Worried about your home & office cleaning?{" "}
               </p>
               <p className="text-white z-50">
-                Hire us for any professional cleaning service{" "}
+                Hire us for any professional building maintenance company offering all types of cleaning and building maintenance needs{" "}
               </p>
             </div>
           </div>
@@ -157,11 +157,11 @@ function Cleaning() {
                       <option value="Mattress Cleaning">
                         Mattress Cleaning
                       </option>
-                      <option value="Gardening Maintenance and Landscaping">
-                        Gardening Maintenance and Landscaping
+                      <option value="Gardening, Beautification & Landscaping services">
+                        Gardening, Beautification & Landscaping services
                       </option>
-                      <option value="Pest Control Service">
-                        Pest Control Service
+                      <option value="Pest Control & Fumigation Service Service">
+                        Pest Control & Fumigation Service Service
                       </option>
                     
                       <option value="Industrial Cleaning">

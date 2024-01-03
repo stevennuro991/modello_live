@@ -60,15 +60,21 @@ function Home() {
     //   link: "/cleaning-services",
     // },
     {
+      image: service8,
+      name: "Industrial Cleaning",
+      pricing: "Request a quote",
+      link: "/industrial-cleaning",
+    },
+    {
       image: service2,
-      name: "Apartment cleaning",
+      name: "Apartment Cleaning",
       pricing: "Starting from 700cedis",
       link: "/apartment-cleaning",
     },
     {
       image: service3,
       name: "Sofa Cleaning",
-      pricing: "Starting from 450cedis",
+      pricing: "Starting from 80cedis",
       link: "/sofa-cleaning",
     },
     {
@@ -77,29 +83,17 @@ function Home() {
       pricing: "Starting from 180cedis",
       link: "/mattress-cleaning",
     },
-    // {
-    //   image: service4,
-    //   name: "Car Washing and Detailing",
-    //   pricing: "Starting from 265cedis",
-    //   link: "/car-cleaning",
-    // },
     {
       image: service6,
-      name: "Pest Control",
+      name: "Pest Control & Fumigation Service",
       pricing: "Starting from 550cedis",
       link: "/pest-control",
     },
     {
       image: service7,
-      name: "Gardening Maintenance and Landscaping",
+      name: "Gardening, Beautification & Landscaping Services",
       pricing: "Starting from 550cedis",
       link: "/gardening-and-landscaping",
-    },
-    {
-      image: service8,
-      name: "Industrial cleaning",
-      pricing: "Starting from 20cedis",
-      link: "/industrial-cleaning",
     },
   ];
   const surroundingCards = [
@@ -168,7 +162,6 @@ function Home() {
     return () => clearInterval(slideInterval);
   }, [slideIndex, textSlides.length]);
 
-
   return (
     <section className="">
       <div className="md:relative">
@@ -203,11 +196,11 @@ function Home() {
                 <h1 className="text-white text-ls ">INTRODUCING MODELLO</h1>
               </div>
               <h1 className="text-white md:text-[30px] leading-tight  font-bold md:w-[90%]">
-                Worried about your home & office cleaning?
+                Worried about maintaining your buildings?
               </h1>
-              <p className="text-white md:w-[60%]">
-                Hire us! We are a professional cleaning company offering all
-                type of cleaning and building maintenance services.
+              <p className="text-white text-xl font-bold md:w-[60%]">
+                Hire us! We are a professional building maintenance company
+                offering all types of cleaning and building maintenance needs.
               </p>
             </div>
           </div>
@@ -221,39 +214,65 @@ function Home() {
             <h1 className="text-black text-ls uppercase">About Company</h1>
           </div>
 
-          <div className="flex flex-col space-y-10">
-            <div className="flex flex-col space-y-5">
-              <h1 className="pt-6 md:text-[32px] font-semibold">
-                Why Will You Choose Our Services?
-              </h1>
-              <p className="justify-content justify-self-auto">
-                At Modello, we believe that the value of your building is not
-                just in its structure, but in how well it's cared for. Our
-                comprehensive range of services - from general cleaning to
-                building renovation - are designed to ensure that every aspect
-                of your property is impeccably maintained. Preserve and Enhance:
-                Regular maintenance with Modello isn’t just about upkeep; it’s
-                about enhancing your property’s value and appeal. Our expert
-                team employs the latest techniques in cleaning, pest control,
-                and landscaping to ensure your property remains a coveted asset.
-                Tailored to Your Needs: We understand that every property is
-                unique. That’s why we offer customized solutions tailored to the
-                specific needs of your building, ensuring optimal care and
-                maintenance. Sustainable and Efficient: Our commitment to
-                sustainability means we use eco-friendly methods and materials,
-                ensuring a better environment for you and future generations.
-                Join our community of satisfied clients who trust us to keep
-                their buildings not just functioning, but thriving. Contact us
-                today to learn more about how we can help enhance the value of
-                your property.
-              </p>
-              <Link
-                to="about"
-                className="text-blue-500 text-sm underline pb-10 cursor-pointer z-50"
-              >
-                Learn more about the company
-              </Link>
-            </div>
+          <div className="flex flex-col space-y-5">
+            <h1 className="pt-6 md:text-[32px] font-semibold">
+              Why Choose Us?
+            </h1>
+            <p>
+              At Modello, we believe that the value of your building is not just
+              in its structure, but in how well it's cared for. Our
+              comprehensive range of services - from general cleaning to
+              building renovation - are designed to ensure that every aspect of
+              your property is:
+            </p>
+            <ul >
+              <li>
+                <p>
+                  Impeccably maintained, preserved, and enhanced: Regular
+                  maintenance with Modello isn’t just about upkeep; it’s about
+                  enhancing your property’s value and appeal. Our expert team
+                  employs the latest techniques in:
+                </p>
+                <ul className="list-disc pl-10">
+                  <li>Cleaning</li>
+                  <li>Pest Control & Fumigation Services</li>
+                  <li>
+                  Gardening, Beautification & Landscaping Services
+                  </li>
+                  <li>
+                  Building Maintenance (Renovation Services)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p className="mt-10">
+                  Tailored to your needs: We understand that every property is
+                  unique. That’s why we offer customized solutions tailored to
+                  the specific needs of your building, ensuring optimal care and
+                  maintenance.
+                </p>
+              </li>
+              <li>
+              <p className="mt-10">
+                  Sustainable and Efficient: Our commitment to sustainability
+                  means we use eco-friendly methods and materials, ensuring a
+                  better environment for you and future generations.
+                </p>
+              </li>
+            </ul>
+
+            <p>
+              Join our community of satisfied clients who trust us to keep their
+              buildings not just functioning, but thriving. Contact us today to
+              learn more about how we can help enhance the value of your
+              property.
+            </p>
+            <Link
+              to="about"
+              className="text-blue-500 text-sm underline pb-10 cursor-pointer z-50"
+            >
+              Learn more about the company
+            </Link>
           </div>
         </div>
         <div className="md:w-[50%] z-50">
@@ -275,7 +294,7 @@ function Home() {
         </div>
         <div className="absolute flex w-full h-full justify-center items-center z-20 gap-2 md:-mt-40 -mt-80">
           <h1 className="pt-6 justify-center item-center w-29 text-[32px] md:px-[480px] text-center font-semibold text-white">
-            Get amazing cleaning in 3 simple steps{" "}
+            Get amazing building maintenance in 3 simple steps{" "}
           </h1>
         </div>
         <div className="grid md:grid-cols-3 w-full md:place-items-center md:gap-10 z-30 relative h-full md:px-60 pt-[250px] p-5 md:p-0">
@@ -306,14 +325,14 @@ function Home() {
             <h1 className="text-black uppercase">Services</h1>
             <hr className="bg-black h-[5px] w-[100px]" />
           </div>
-          <h1 className="flex justify-start items-center md:text-3xl font-semibold md:pr-32">
-            Offering Best Cleaning Services{" "}
+          <h1 className="flex justify-start items-center md:text-2xl font-semibold md:pr-32">
+            Offering best building maintenance services{" "}
           </h1>
         </div>
         <div className="md:w-[40%] ">
           <p>
-            We are provding all type of cleaning solutions for every small and
-            big businesses, organizations and homes
+            We provide all kinds of building maintenance solutions to small and
+            big businesses, organizations and homes.
           </p>
         </div>
         <div>
@@ -366,9 +385,7 @@ function Home() {
           <h1 className="font-bold md:w-[400px] text-4xl pt-6">
             Amazing benefits with us
           </h1>
-          <Link to="/services" className="text-blue-500 text-sm underline">
-            Book a service now
-          </Link>
+
           <div className="grid md:grid-cols-2 w-full md:place-items-center md:gap-10">
             {serviceIcons.map((item, index) => {
               return (

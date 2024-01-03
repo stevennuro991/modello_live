@@ -68,9 +68,10 @@ function Contact() {
                 You’re always welcome
               </h1>
               <p>
-                Shall under In yielding saying given dominion don't of two god
-                which said. Creature dominion was the good creepeth to give
-                bring doesn't first shall two signs.
+                We're here to help! If you have any questions, need more
+                information, or just want to share your feedback with us, don't
+                hesitate to reach out. Our team is dedicated to providing you
+                with the support you need in a timely and friendly manner.
               </p>
             </div>
             <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center space-y-5 md:space-y-0">
@@ -78,13 +79,13 @@ function Contact() {
                 <p className="font-semibold">Ejisu-Kumasi road,</p>
                 <p>Adako Jachie</p>
                 <p>Near Prefos Limited</p>
-                <p>+233547986097</p>
+                <p>Customer care +233547986097</p>
               </div>
               <div className="">
                 <p className="font-semibold">Ahinsan,</p>
                 <p>GCB Lane</p>
                 <p>Kumasi</p>
-                <p>+233547986097</p>
+                <p>Customer care +233547986097</p>
               </div>
             </div>
             <div>
@@ -94,79 +95,11 @@ function Contact() {
                 </p>
                 <p>Lakeside Estate</p>
                 <p>Accra</p>
-                <p>+233547986097</p>
+                <p>Customer care +233547986097</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="md:w-[50%] h-fit flex justify-center items-center relative md:-mt-40 mt-5">
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="h-fit w-full bg-white rounded-xl shadow-md flex flex-col items-center space-y-10 p-5 md:p-10">
-              <p className="text-xl"> Send your Queries</p>
-              <div className="w-full flex flex-col space-y-10">
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p>Your name</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p> Phone number</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-            
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p> Choose a service</p>
-                  <input
-                    type="text"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-                <label htmlFor="" className="flex flex-col space-y-1">
-                  <p>Your message</p>
-                  <textarea
-                    name="message"
-                    id=""
-                    cols="30"
-                    rows="5"
-                    className="border p-2 w-full bg-gray-100 rounded"
-                  />
-                </label>
-                <div className="w-full">
-                  <button className="uppercase w-[100%] bg-blue-500 text-white p-2 flex items-center justify-center rounded-md">
-                    <p>Submit Details</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="grid md:grid-cols-3 w-full place-items-center pb-40 md:px-40 md:gap-10 gap-2 p-5">
-        {contactCards.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="md:w-[400px] h-72 hover:scale-[1.02] duration-150"
-            >
-              <div className="flex w-full h-full border relative hover:cursor-pointer p-5 flex-col justify-center items-center shadow-md bg-cover object-contain  bg-gradient-to-r from-[#090071] to-[#6480DF] space-y-5 rounded-md">
-                <p className="text-white text-2xl font-bold">{item?.name}</p>
-                <p className="text-white text-center text-[22px] font-extralight">
-                  {item?.description}
-                </p>
-                <div className="w-[50%]">
-                  <button className="uppercase w-[100%] bg-[#EEB000] text-white p-2 flex items-center justify-center rounded-md">
-                    <p className="uppercase">Call Us</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-          );
-        })}
       </div>
     </section>
   );
